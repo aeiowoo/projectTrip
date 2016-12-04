@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
         // TEST
-        debugPrint("aaaa")
+        debugPrint("aaaarr")
 		
 		//환율 테스트
 		let urlPath: String = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%3D%22USDKRW%22&format=json&diagnostics=false&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"
@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 		let request1: NSURLRequest = NSURLRequest(url: url as URL)
 		let response: AutoreleasingUnsafeMutablePointer<URLResponse?>?=nil
 		
+        
 		
 		do{
 			
