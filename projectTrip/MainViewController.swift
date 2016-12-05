@@ -49,10 +49,10 @@ class MainViewController: UIViewController {
 //        self.menuTableView.dataSource = self
         
         //네비게이션 바 색 조정
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 71/255, green: 173/255, blue: 247/255, alpha: 1);
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255, green: 216/255, blue: 88/255, alpha: 1);
         
         //네비게이션 타이틀 커스텀 이미지
-        let titleImage = UIImage.init(named: "title")
+        let titleImage = UIImage.init(named: "title1")
         self.navigationItem.titleView = UIImageView.init(image: titleImage)
         
         //슬라이드 뷰 숨겨두기
