@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
     
     //전역 변수들
     var _isSlideViewOpened = false
+    var data = [menuData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +41,14 @@ class MainViewController: UIViewController {
     
     func setDatas() {
         
-        
+        data = [menuData(titleName: "카테고리 설정", imageName: "icon00"),
+                menuData(titleName: "본국 설정", imageName: "icon01"),
+                menuData(titleName: "백업/복구", imageName: "icon04"),
+                menuData(titleName: "평점/리뷰 남기기", imageName: "icon05"),
+                menuData(titleName: "버그 신고 및 제안", imageName: "icon06")]
     }
     
     func createViewContents() {
-        
-        // Setting dataSource
-//        self.menuTableView.dataSource = self
         
         //네비게이션 바 색 조정
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255, green: 216/255, blue: 88/255, alpha: 1);
@@ -96,40 +98,53 @@ class MainViewController: UIViewController {
         })
     }
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showBlackView() {
+        
+        let blackView : UIView = UIView(frame: CGRect(origin: CGPoint(x: 0,y: 0), size: self.view.frame.size))
+        blackView.backgroundColor = UIColor.black
+        self.view.addSubview(blackView)
     }
-    */
+    func hideBlackView() {
+        
+        
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        if segue.identifier == "MenuSegue" {
+//            
+//            if let indexPath = self.menuTableView.indexPathForSelectedRow {
+//                
+//                let menuVC = segue.destination as! MenuViewController
+//                menuVC.data = data[indexPath.row]
+//            }
+//        }
+//    }
 
 }
 
-//extension MainViewController : UITableViewDataSource {
-//    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        
-//        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        
-//        return 5
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell")
-//        
-//        return cell!
-//    }
-//}
+extension MainViewController : UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
+        
+        cell.menuLabel.text = data[indexPath.row].titleName
+        cell.imageView?.image = UIImage(named: data[indexPath.row].imageName)
+        
+        return cell
+    }
+}
 
 
 
