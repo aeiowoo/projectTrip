@@ -15,8 +15,10 @@
 		7C51E26F1DE9CBF90037DB1B /* projectTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E26E1DE9CBF90037DB1B /* projectTripTests.swift */; };
 		7C51E27A1DE9CBF90037DB1B /* projectTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E2791DE9CBF90037DB1B /* projectTripUITests.swift */; };
 		B6493FD21DF6703E00121528 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD11DF6703E00121528 /* MenuViewController.swift */; };
+		B6493FD41DF6A11900121528 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD31DF6A11900121528 /* ModalViewController.swift */; };
+		B6493FD61DF6FC6600121528 /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */; };
+		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
 		B6A899911DF3D35300D57EDE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A899901DF3D35300D57EDE /* MainViewController.swift */; };
-		B6A899951DF6609D00D57EDE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A899941DF6609D00D57EDE /* SWRevealViewController.m */; };
 		B6A899981DF663A000D57EDE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +54,10 @@
 		7C51E2791DE9CBF90037DB1B /* projectTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectTripUITests.swift; sourceTree = "<group>"; };
 		7C51E27B1DE9CBF90037DB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6493FD11DF6703E00121528 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B6493FD31DF6A11900121528 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
+		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
 		B6A899901DF3D35300D57EDE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		B6A899921DF6609C00D57EDE /* projectTrip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "projectTrip-Bridging-Header.h"; sourceTree = "<group>"; };
-		B6A899931DF6609D00D57EDE /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		B6A899941DF6609D00D57EDE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,12 +109,14 @@
 		7C51E2581DE9CBF70037DB1B /* projectTrip */ = {
 			isa = PBXGroup;
 			children = (
-				B6A899961DF660A300D57EDE /* SWReavelViewController */,
 				7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */,
+				B6493FD91DF70F4300121528 /* Datas */,
 				7C51E25B1DE9CBF80037DB1B /* ViewController.swift */,
 				B6A899901DF3D35300D57EDE /* MainViewController.swift */,
-				B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */,
 				B6493FD11DF6703E00121528 /* MenuViewController.swift */,
+				B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */,
+				B6493FD31DF6A11900121528 /* ModalViewController.swift */,
+				B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */,
 				7C51E25D1DE9CBF80037DB1B /* Main.storyboard */,
 				7C51E2601DE9CBF80037DB1B /* Assets.xcassets */,
 				7C51E2621DE9CBF80037DB1B /* LaunchScreen.storyboard */,
@@ -139,14 +143,12 @@
 			path = projectTripUITests;
 			sourceTree = "<group>";
 		};
-		B6A899961DF660A300D57EDE /* SWReavelViewController */ = {
+		B6493FD91DF70F4300121528 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
-				B6A899931DF6609D00D57EDE /* SWRevealViewController.h */,
-				B6A899941DF6609D00D57EDE /* SWRevealViewController.m */,
-				B6A899921DF6609C00D57EDE /* projectTrip-Bridging-Header.h */,
+				B6493FD71DF70F3B00121528 /* AppDatas.swift */,
 			);
-			name = SWReavelViewController;
+			name = Datas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,11 +287,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A899911DF3D35300D57EDE /* MainViewController.swift in Sources */,
+				B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */,
 				B6493FD21DF6703E00121528 /* MenuViewController.swift in Sources */,
 				7C51E25C1DE9CBF80037DB1B /* ViewController.swift in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
-				B6A899951DF6609D00D57EDE /* SWRevealViewController.m in Sources */,
+				B6493FD61DF6FC6600121528 /* CreateNewViewController.swift in Sources */,
 				B6A899981DF663A000D57EDE /* MenuTableViewCell.swift in Sources */,
+				B6493FD41DF6A11900121528 /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
