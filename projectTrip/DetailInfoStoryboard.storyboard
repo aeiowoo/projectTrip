@@ -10,22 +10,23 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="VNw-UH-b3i">
+        <scene sceneID="GTo-7w-7Ck">
             <objects>
-                <viewController storyboardIdentifier="ProfileStoryboard" id="8we-hU-UmM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailInfoStoryboard" id="q0J-a0-9Ju" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xou-Vi-bVA"/>
-                        <viewControllerLayoutGuide type="bottom" id="K2z-hS-lY7"/>
+                        <viewControllerLayoutGuide type="top" id="xQq-3X-IWQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="kcD-fI-rT3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Oz4-95-EKf">
+                    <view key="view" contentMode="scaleToFill" id="PdL-ZF-t2w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="l1t-1G-1Yi"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dHP-Xq-glv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAF-iz-aID" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="80"/>
+            <point key="canvasLocation" x="790" y="151"/>
         </scene>
     </scenes>
 </document>
