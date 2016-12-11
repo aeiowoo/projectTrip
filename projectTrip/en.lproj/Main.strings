@@ -1,0 +1,54 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6Rj-fE-zph"; */
+"6Rj-fE-zph.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "OnairTrip"; ObjectID = "8h9-bt-2x5"; */
+"8h9-bt-2x5.title" = "OnairTrip";
+
+/* Class = "UILabel"; text = "내보내기"; ObjectID = "BXq-A1-lnz"; */
+"BXq-A1-lnz.text" = "내보내기";
+
+/* Class = "UILabel"; text = "리포트"; ObjectID = "GWE-D4-A3j"; */
+"GWE-D4-A3j.text" = "리포트";
+
+/* Class = "UILabel"; text = "여행 프로필"; ObjectID = "IJw-uU-0xc"; */
+"IJw-uU-0xc.text" = "여행 프로필";
+
+/* Class = "UIButton"; normalTitle = "여행 추가하기"; ObjectID = "JkO-GK-OHe"; */
+"JkO-GK-OHe.normalTitle" = "여행 추가하기";
+
+/* Class = "UIButton"; normalTitle = "..."; ObjectID = "N0g-kk-Fdd"; */
+"N0g-kk-Fdd.normalTitle" = "...";
+
+/* Class = "UIButton"; normalTitle = "수정"; ObjectID = "Ncw-lQ-uXs"; */
+"Ncw-lQ-uXs.normalTitle" = "수정";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Q82-aS-65g"; */
+"Q82-aS-65g.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "가계부 쓰기 및 수정"; ObjectID = "SBZ-ir-JB4"; */
+"SBZ-ir-JB4.text" = "가계부 쓰기 및 수정";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TfU-lp-KXN"; */
+"TfU-lp-KXN.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "차트"; ObjectID = "Vox-zy-xbR"; */
+"Vox-zy-xbR.normalTitle" = "차트";
+
+/* Class = "UIButton"; normalTitle = "프로필"; ObjectID = "cbq-xo-88X"; */
+"cbq-xo-88X.normalTitle" = "프로필";
+
+/* Class = "UILabel"; text = "구체적인 내용"; ObjectID = "etT-R6-Ani"; */
+"etT-R6-Ani.text" = "구체적인 내용";
+
+/* Class = "UILabel"; text = "새로운 가계부 쓰기"; ObjectID = "fQP-eA-Khp"; */
+"fQP-eA-Khp.text" = "새로운 가계부 쓰기";
+
+/* Class = "UILabel"; text = "예산 화폐"; ObjectID = "qn8-qk-lVI"; */
+"qn8-qk-lVI.text" = "예산 화폐";
+
+/* Class = "UIButton"; normalTitle = "image"; ObjectID = "rOX-IK-5Iu"; */
+"rOX-IK-5Iu.normalTitle" = "image";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vdD-hf-F3j"; */
+"vdD-hf-F3j.text" = "Label";

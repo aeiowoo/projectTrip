@@ -528,7 +528,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.29997859589041098" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.75"/>
                         <gestureRecognizers/>
                         <constraints>

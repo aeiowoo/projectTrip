@@ -38,8 +38,8 @@ class MainViewController: UIViewController {
     @IBAction func onMenuButton(_ sender: UIBarButtonItem) {
         
         let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "ModalViewController") as! ModalViewController
+        modalVC.modalPresentationStyle = .overCurrentContext
         modalVC.transitioningDelegate = self
-        modalVC.modalPresentationStyle = .custom
         present(modalVC, animated: true, completion: nil)
 
     }
