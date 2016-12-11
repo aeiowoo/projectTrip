@@ -20,6 +20,7 @@
 		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
 		B6A899911DF3D35300D57EDE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A899901DF3D35300D57EDE /* MainViewController.swift */; };
 		B6A899981DF663A000D57EDE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */; };
+		B6B4FA781DFA6F0600A83ABD /* ModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA771DFA6F0600A83ABD /* ModalAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
 		B6A899901DF3D35300D57EDE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		B6B4FA771DFA6F0600A83ABD /* ModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +113,12 @@
 			children = (
 				7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */,
 				B6493FD91DF70F4300121528 /* Datas */,
-				7C51E25B1DE9CBF80037DB1B /* ViewController.swift */,
+				B6B4FA441DF82F6C00A83ABD /* ProtocolFiles */,
 				B6A899901DF3D35300D57EDE /* MainViewController.swift */,
+				B6493FD31DF6A11900121528 /* ModalViewController.swift */,
+				7C51E25B1DE9CBF80037DB1B /* ViewController.swift */,
 				B6493FD11DF6703E00121528 /* MenuViewController.swift */,
 				B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */,
-				B6493FD31DF6A11900121528 /* ModalViewController.swift */,
 				B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */,
 				7C51E25D1DE9CBF80037DB1B /* Main.storyboard */,
 				7C51E2601DE9CBF80037DB1B /* Assets.xcassets */,
@@ -149,6 +152,14 @@
 				B6493FD71DF70F3B00121528 /* AppDatas.swift */,
 			);
 			name = Datas;
+			sourceTree = "<group>";
+		};
+		B6B4FA441DF82F6C00A83ABD /* ProtocolFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B6B4FA771DFA6F0600A83ABD /* ModalAnimator.swift */,
+			);
+			name = ProtocolFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B6493FD61DF6FC6600121528 /* CreateNewViewController.swift in Sources */,
 				B6A899981DF663A000D57EDE /* MenuTableViewCell.swift in Sources */,
+				B6B4FA781DFA6F0600A83ABD /* ModalAnimator.swift in Sources */,
 				B6493FD41DF6A11900121528 /* ModalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
