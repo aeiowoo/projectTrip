@@ -14,6 +14,20 @@
 		7C51E2641DE9CBF80037DB1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E2621DE9CBF80037DB1B /* LaunchScreen.storyboard */; };
 		7C51E26F1DE9CBF90037DB1B /* projectTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E26E1DE9CBF90037DB1B /* projectTripTests.swift */; };
 		7C51E27A1DE9CBF90037DB1B /* projectTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E2791DE9CBF90037DB1B /* projectTripUITests.swift */; };
+		7C9D40321DFCEC620012CF23 /* CategoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40311DFCEC620012CF23 /* CategoryStoryboard.storyboard */; };
+		7C9D40341DFCEC800012CF23 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40331DFCEC800012CF23 /* ProfileStoryboard.storyboard */; };
+		7C9D40361DFCEC920012CF23 /* DetailRegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40351DFCEC920012CF23 /* DetailRegisterStoryboard.storyboard */; };
+		7C9D40381DFCEC9B0012CF23 /* BackupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40371DFCEC9B0012CF23 /* BackupStoryboard.storyboard */; };
+		7C9D403A1DFCECA40012CF23 /* DetailListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40391DFCECA40012CF23 /* DetailListStoryboard.storyboard */; };
+		7C9D403C1DFCECB20012CF23 /* CountryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D403B1DFCECB20012CF23 /* CountryStoryboard.storyboard */; };
+		7CE6AD4B1DFC35E8002E72A7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE6AD4A1DFC35E8002E72A7 /* libsqlite3.tbd */; };
+		7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD501DFC3721002E72A7 /* FMDatabase.m */; };
+		7CE6AD5A1DFC3721002E72A7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD521DFC3721002E72A7 /* FMResultSet.m */; };
+		7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD541DFC3721002E72A7 /* FMDatabaseQueue.m */; };
+		7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD561DFC3721002E72A7 /* FMDatabaseAdditions.m */; };
+		7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD581DFC3721002E72A7 /* FMDatabasePool.m */; };
+		7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD651DFC3B10002E72A7 /* DBManager.swift */; };
+		7CE6AD691DFC5A7D002E72A7 /* tripDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CE6AD681DFC5A7D002E72A7 /* tripDB.sqlite */; };
 		B6493FD21DF6703E00121528 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD11DF6703E00121528 /* MenuViewController.swift */; };
 		B6493FD41DF6A11900121528 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD31DF6A11900121528 /* ModalViewController.swift */; };
 		B6493FD61DF6FC6600121528 /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */; };
@@ -53,6 +67,27 @@
 		7C51E2751DE9CBF90037DB1B /* projectTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projectTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C51E2791DE9CBF90037DB1B /* projectTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectTripUITests.swift; sourceTree = "<group>"; };
 		7C51E27B1DE9CBF90037DB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C9D40311DFCEC620012CF23 /* CategoryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoryStoryboard.storyboard; sourceTree = "<group>"; };
+		7C9D40331DFCEC800012CF23 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		7C9D40351DFCEC920012CF23 /* DetailRegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailRegisterStoryboard.storyboard; sourceTree = "<group>"; };
+		7C9D40371DFCEC9B0012CF23 /* BackupStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BackupStoryboard.storyboard; sourceTree = "<group>"; };
+		7C9D40391DFCECA40012CF23 /* DetailListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailListStoryboard.storyboard; sourceTree = "<group>"; };
+		7C9D403B1DFCECB20012CF23 /* CountryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountryStoryboard.storyboard; sourceTree = "<group>"; };
+		7CE6AD4A1DFC35E8002E72A7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7CE6AD4E1DFC3721002E72A7 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		7CE6AD4F1DFC3721002E72A7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		7CE6AD501DFC3721002E72A7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		7CE6AD511DFC3721002E72A7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		7CE6AD521DFC3721002E72A7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		7CE6AD531DFC3721002E72A7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		7CE6AD541DFC3721002E72A7 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		7CE6AD551DFC3721002E72A7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		7CE6AD561DFC3721002E72A7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		7CE6AD571DFC3721002E72A7 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		7CE6AD581DFC3721002E72A7 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		7CE6AD651DFC3B10002E72A7 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		7CE6AD671DFC3D07002E72A7 /* projectTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "projectTrip-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CE6AD681DFC5A7D002E72A7 /* tripDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = tripDB.sqlite; sourceTree = "<group>"; };
 		B6493FD11DF6703E00121528 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B6493FD31DF6A11900121528 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE6AD4B1DFC35E8002E72A7 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +129,7 @@
 				7C51E26D1DE9CBF90037DB1B /* projectTripTests */,
 				7C51E2781DE9CBF90037DB1B /* projectTripUITests */,
 				7C51E2571DE9CBF70037DB1B /* Products */,
+				7CE6AD491DFC35E7002E72A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,18 +146,21 @@
 		7C51E2581DE9CBF70037DB1B /* projectTrip */ = {
 			isa = PBXGroup;
 			children = (
+				7C9D40301DFCEBFC0012CF23 /* CategoryStoryboard */,
+				7C9D402F1DFCEBF50012CF23 /* ProfileStoryboard */,
+				7C9D402E1DFCEBEC0012CF23 /* DetailRegisterStoryboard */,
+				7C9D402D1DFCEBE60012CF23 /* BackupStoryboard */,
+				7C9D402C1DFCEBD80012CF23 /* DetailListStoryboard */,
+				7C9D402A1DFCEA3F0012CF23 /* CountryStoryboard */,
+				7C9D40291DFCEA310012CF23 /* MainStoryboard */,
+				7CE6AD5E1DFC3784002E72A7 /* SuperClass */,
+				7CE6AD4C1DFC36B2002E72A7 /* Library */,
 				7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */,
 				B6493FD91DF70F4300121528 /* Datas */,
-				7C51E25B1DE9CBF80037DB1B /* ViewController.swift */,
-				B6A899901DF3D35300D57EDE /* MainViewController.swift */,
-				B6493FD11DF6703E00121528 /* MenuViewController.swift */,
-				B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */,
-				B6493FD31DF6A11900121528 /* ModalViewController.swift */,
-				B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */,
-				7C51E25D1DE9CBF80037DB1B /* Main.storyboard */,
 				7C51E2601DE9CBF80037DB1B /* Assets.xcassets */,
 				7C51E2621DE9CBF80037DB1B /* LaunchScreen.storyboard */,
 				7C51E2651DE9CBF80037DB1B /* Info.plist */,
+				7CE6AD681DFC5A7D002E72A7 /* tripDB.sqlite */,
 			);
 			path = projectTrip;
 			sourceTree = "<group>";
@@ -141,6 +181,127 @@
 				7C51E27B1DE9CBF90037DB1B /* Info.plist */,
 			);
 			path = projectTripUITests;
+			sourceTree = "<group>";
+		};
+		7C9D40291DFCEA310012CF23 /* MainStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				7C51E25D1DE9CBF80037DB1B /* Main.storyboard */,
+				7C51E25B1DE9CBF80037DB1B /* ViewController.swift */,
+				B6A899901DF3D35300D57EDE /* MainViewController.swift */,
+				B6493FD11DF6703E00121528 /* MenuViewController.swift */,
+				B6493FD51DF6FC6600121528 /* CreateNewViewController.swift */,
+				B6493FD31DF6A11900121528 /* ModalViewController.swift */,
+				B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */,
+			);
+			name = MainStoryboard;
+			sourceTree = "<group>";
+		};
+		7C9D402A1DFCEA3F0012CF23 /* CountryStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D403B1DFCECB20012CF23 /* CountryStoryboard.storyboard */,
+			);
+			name = CountryStoryboard;
+			sourceTree = "<group>";
+		};
+		7C9D402C1DFCEBD80012CF23 /* DetailListStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D40391DFCECA40012CF23 /* DetailListStoryboard.storyboard */,
+			);
+			name = DetailListStoryboard;
+			sourceTree = "<group>";
+		};
+		7C9D402D1DFCEBE60012CF23 /* BackupStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D40371DFCEC9B0012CF23 /* BackupStoryboard.storyboard */,
+			);
+			name = BackupStoryboard;
+			sourceTree = "<group>";
+		};
+		7C9D402E1DFCEBEC0012CF23 /* DetailRegisterStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D40351DFCEC920012CF23 /* DetailRegisterStoryboard.storyboard */,
+			);
+			name = DetailRegisterStoryboard;
+			sourceTree = "<group>";
+		};
+		7C9D402F1DFCEBF50012CF23 /* ProfileStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D40331DFCEC800012CF23 /* ProfileStoryboard.storyboard */,
+			);
+			name = ProfileStoryboard;
+			sourceTree = "<group>";
+		};
+		7C9D40301DFCEBFC0012CF23 /* CategoryStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				7C9D40311DFCEC620012CF23 /* CategoryStoryboard.storyboard */,
+			);
+			name = CategoryStoryboard;
+			sourceTree = "<group>";
+		};
+		7CE6AD491DFC35E7002E72A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CE6AD4A1DFC35E8002E72A7 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CE6AD4C1DFC36B2002E72A7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7CE6AD4D1DFC36E5002E72A7 /* FMDB */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		7CE6AD4D1DFC36E5002E72A7 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				7CE6AD671DFC3D07002E72A7 /* projectTrip-Bridging-Header.h */,
+				7CE6AD4E1DFC3721002E72A7 /* FMDB.h */,
+				7CE6AD4F1DFC3721002E72A7 /* FMDatabase.h */,
+				7CE6AD501DFC3721002E72A7 /* FMDatabase.m */,
+				7CE6AD511DFC3721002E72A7 /* FMResultSet.h */,
+				7CE6AD521DFC3721002E72A7 /* FMResultSet.m */,
+				7CE6AD531DFC3721002E72A7 /* FMDatabaseQueue.h */,
+				7CE6AD541DFC3721002E72A7 /* FMDatabaseQueue.m */,
+				7CE6AD551DFC3721002E72A7 /* FMDatabaseAdditions.h */,
+				7CE6AD561DFC3721002E72A7 /* FMDatabaseAdditions.m */,
+				7CE6AD571DFC3721002E72A7 /* FMDatabasePool.h */,
+				7CE6AD581DFC3721002E72A7 /* FMDatabasePool.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		7CE6AD5E1DFC3784002E72A7 /* SuperClass */ = {
+			isa = PBXGroup;
+			children = (
+				7CE6AD601DFC37C4002E72A7 /* TRDataManager */,
+				7CE6AD5F1DFC37BC002E72A7 /* DBManager */,
+			);
+			name = SuperClass;
+			sourceTree = "<group>";
+		};
+		7CE6AD5F1DFC37BC002E72A7 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				7CE6AD651DFC3B10002E72A7 /* DBManager.swift */,
+			);
+			name = DBManager;
+			sourceTree = "<group>";
+		};
+		7CE6AD601DFC37C4002E72A7 /* TRDataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TRDataManager;
 			sourceTree = "<group>";
 		};
 		B6493FD91DF70F4300121528 /* Datas */ = {
@@ -219,6 +380,7 @@
 				TargetAttributes = {
 					7C51E2551DE9CBF60037DB1B = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KY4855WHX4;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -260,8 +422,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C51E2641DE9CBF80037DB1B /* LaunchScreen.storyboard in Resources */,
+				7C9D40381DFCEC9B0012CF23 /* BackupStoryboard.storyboard in Resources */,
+				7C9D40321DFCEC620012CF23 /* CategoryStoryboard.storyboard in Resources */,
+				7C9D40361DFCEC920012CF23 /* DetailRegisterStoryboard.storyboard in Resources */,
 				7C51E2611DE9CBF80037DB1B /* Assets.xcassets in Resources */,
+				7C9D40341DFCEC800012CF23 /* ProfileStoryboard.storyboard in Resources */,
+				7C9D403A1DFCECA40012CF23 /* DetailListStoryboard.storyboard in Resources */,
 				7C51E25F1DE9CBF80037DB1B /* Main.storyboard in Resources */,
+				7C9D403C1DFCECB20012CF23 /* CountryStoryboard.storyboard in Resources */,
+				7CE6AD691DFC5A7D002E72A7 /* tripDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,12 +457,18 @@
 			files = (
 				B6A899911DF3D35300D57EDE /* MainViewController.swift in Sources */,
 				B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */,
+				7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */,
 				B6493FD21DF6703E00121528 /* MenuViewController.swift in Sources */,
+				7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */,
+				7CE6AD5A1DFC3721002E72A7 /* FMResultSet.m in Sources */,
 				7C51E25C1DE9CBF80037DB1B /* ViewController.swift in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B6493FD61DF6FC6600121528 /* CreateNewViewController.swift in Sources */,
+				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
 				B6A899981DF663A000D57EDE /* MenuTableViewCell.swift in Sources */,
 				B6493FD41DF6A11900121528 /* ModalViewController.swift in Sources */,
+				7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */,
+				7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +619,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KY4855WHX4;
 				INFOPLIST_FILE = projectTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiftive.projectTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,7 +636,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KY4855WHX4;
 				INFOPLIST_FILE = projectTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swiftive.projectTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -58,8 +58,8 @@ class MainViewController: UIViewController {
         self.navigationItem.titleView = UIImageView.init(image: titleImage)
         
         //슬라이드 뷰 숨겨두기
-        self.hiddenView.frame.origin = CGPoint(x: 0 - self.hiddenView.frame.size.width, y: 0)
-        self.view.addSubview(hiddenView)
+        //self.hiddenView.frame.origin = CGPoint(x: 0 - self.hiddenView.frame.size.width, y: 0)
+        //self.view.addSubview(hiddenView)
         
     }
 
