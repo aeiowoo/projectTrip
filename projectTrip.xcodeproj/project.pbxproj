@@ -13,12 +13,6 @@
 		7C51E2641DE9CBF80037DB1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E2621DE9CBF80037DB1B /* LaunchScreen.storyboard */; };
 		7C51E26F1DE9CBF90037DB1B /* projectTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E26E1DE9CBF90037DB1B /* projectTripTests.swift */; };
 		7C51E27A1DE9CBF90037DB1B /* projectTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E2791DE9CBF90037DB1B /* projectTripUITests.swift */; };
-		7C6EA47D1DFD0AC700660EB6 /* DetailInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6EA47C1DFD0AC700660EB6 /* DetailInfoStoryboard.storyboard */; };
-		7C9D40321DFCEC620012CF23 /* CategoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40311DFCEC620012CF23 /* CategoryStoryboard.storyboard */; };
-		7C9D40341DFCEC800012CF23 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40331DFCEC800012CF23 /* ProfileStoryboard.storyboard */; };
-		7C9D40381DFCEC9B0012CF23 /* BackupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40371DFCEC9B0012CF23 /* BackupStoryboard.storyboard */; };
-		7C9D403A1DFCECA40012CF23 /* DetailListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D40391DFCECA40012CF23 /* DetailListStoryboard.storyboard */; };
-		7C9D403C1DFCECB20012CF23 /* CountryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D403B1DFCECB20012CF23 /* CountryStoryboard.storyboard */; };
 		7CE6AD4B1DFC35E8002E72A7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE6AD4A1DFC35E8002E72A7 /* libsqlite3.tbd */; };
 		7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD501DFC3721002E72A7 /* FMDatabase.m */; };
 		7CE6AD5A1DFC3721002E72A7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD521DFC3721002E72A7 /* FMResultSet.m */; };
@@ -27,6 +21,12 @@
 		7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD581DFC3721002E72A7 /* FMDatabasePool.m */; };
 		7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6AD651DFC3B10002E72A7 /* DBManager.swift */; };
 		7CE6AD691DFC5A7D002E72A7 /* tripDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CE6AD681DFC5A7D002E72A7 /* tripDB.sqlite */; };
+		8C13FCED1DFD145F00D26D81 /* DetailInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCEC1DFD145F00D26D81 /* DetailInfoStoryboard.storyboard */; };
+		8C13FCF01DFD14C300D26D81 /* CategoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCEF1DFD14C300D26D81 /* CategoryStoryboard.storyboard */; };
+		8C13FCF31DFD14E200D26D81 /* CountryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCF21DFD14E200D26D81 /* CountryStoryboard.storyboard */; };
+		8C13FCF61DFD150A00D26D81 /* DetailListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCF51DFD150A00D26D81 /* DetailListStoryboard.storyboard */; };
+		8C13FCF91DFD153000D26D81 /* BackupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCF81DFD153000D26D81 /* BackupStoryboard.storyboard */; };
+		8C13FCFC1DFD155100D26D81 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */; };
 		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
 		B6B4FA841DFCF30C00A83ABD /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */; };
 		B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */; };
@@ -62,12 +62,6 @@
 		7C51E2751DE9CBF90037DB1B /* projectTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projectTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C51E2791DE9CBF90037DB1B /* projectTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectTripUITests.swift; sourceTree = "<group>"; };
 		7C51E27B1DE9CBF90037DB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C6EA47C1DFD0AC700660EB6 /* DetailInfoStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailInfoStoryboard.storyboard; sourceTree = "<group>"; };
-		7C9D40311DFCEC620012CF23 /* CategoryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoryStoryboard.storyboard; sourceTree = "<group>"; };
-		7C9D40331DFCEC800012CF23 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
-		7C9D40371DFCEC9B0012CF23 /* BackupStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BackupStoryboard.storyboard; sourceTree = "<group>"; };
-		7C9D40391DFCECA40012CF23 /* DetailListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailListStoryboard.storyboard; sourceTree = "<group>"; };
-		7C9D403B1DFCECB20012CF23 /* CountryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountryStoryboard.storyboard; sourceTree = "<group>"; };
 		7CE6AD4A1DFC35E8002E72A7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7CE6AD4E1DFC3721002E72A7 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		7CE6AD4F1DFC3721002E72A7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -83,6 +77,12 @@
 		7CE6AD651DFC3B10002E72A7 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		7CE6AD671DFC3D07002E72A7 /* projectTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "projectTrip-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CE6AD681DFC5A7D002E72A7 /* tripDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = tripDB.sqlite; sourceTree = "<group>"; };
+		8C13FCEC1DFD145F00D26D81 /* DetailInfoStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailInfoStoryboard.storyboard; sourceTree = "<group>"; };
+		8C13FCEF1DFD14C300D26D81 /* CategoryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoryStoryboard.storyboard; sourceTree = "<group>"; };
+		8C13FCF21DFD14E200D26D81 /* CountryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountryStoryboard.storyboard; sourceTree = "<group>"; };
+		8C13FCF51DFD150A00D26D81 /* DetailListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailListStoryboard.storyboard; sourceTree = "<group>"; };
+		8C13FCF81DFD153000D26D81 /* BackupStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BackupStoryboard.storyboard; sourceTree = "<group>"; };
+		8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
 		B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
 		B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListSubMenuViewController.swift; sourceTree = "<group>"; };
@@ -138,12 +138,12 @@
 		7C51E2581DE9CBF70037DB1B /* projectTrip */ = {
 			isa = PBXGroup;
 			children = (
-				7C9D40301DFCEBFC0012CF23 /* CategoryStoryboard */,
-				7C9D402F1DFCEBF50012CF23 /* ProfileStoryboard */,
-				7C9D402E1DFCEBEC0012CF23 /* DetailRegisterStoryboard */,
-				7C9D402D1DFCEBE60012CF23 /* BackupStoryboard */,
-				7C9D402C1DFCEBD80012CF23 /* DetailListStoryboard */,
-				7C9D402A1DFCEA3F0012CF23 /* CountryStoryboard */,
+				8C13FCFA1DFD155100D26D81 /* ProfileStoryboard */,
+				8C13FCF71DFD153000D26D81 /* BackupStoryboard */,
+				8C13FCF41DFD150A00D26D81 /* DetailListStoryboard */,
+				8C13FCF11DFD14E200D26D81 /* CountryStoryboard */,
+				8C13FCEE1DFD14C300D26D81 /* CategoryStoryboard */,
+				8C13FCEB1DFD145F00D26D81 /* DetailRegisterStoryboard */,
 				7C9D40291DFCEA310012CF23 /* MainStoryboard */,
 				7CE6AD5E1DFC3784002E72A7 /* SuperClass */,
 				7CE6AD4C1DFC36B2002E72A7 /* Library */,
@@ -183,54 +183,6 @@
 				B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */,
 			);
 			name = MainStoryboard;
-			sourceTree = "<group>";
-		};
-		7C9D402A1DFCEA3F0012CF23 /* CountryStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				7C9D403B1DFCECB20012CF23 /* CountryStoryboard.storyboard */,
-			);
-			name = CountryStoryboard;
-			sourceTree = "<group>";
-		};
-		7C9D402C1DFCEBD80012CF23 /* DetailListStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				7C9D40391DFCECA40012CF23 /* DetailListStoryboard.storyboard */,
-			);
-			name = DetailListStoryboard;
-			sourceTree = "<group>";
-		};
-		7C9D402D1DFCEBE60012CF23 /* BackupStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				7C9D40371DFCEC9B0012CF23 /* BackupStoryboard.storyboard */,
-			);
-			name = BackupStoryboard;
-			sourceTree = "<group>";
-		};
-		7C9D402E1DFCEBEC0012CF23 /* DetailRegisterStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				7C6EA47C1DFD0AC700660EB6 /* DetailInfoStoryboard.storyboard */,
-			);
-			name = DetailRegisterStoryboard;
-			sourceTree = "<group>";
-		};
-		7C9D402F1DFCEBF50012CF23 /* ProfileStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				7C9D40331DFCEC800012CF23 /* ProfileStoryboard.storyboard */,
-			);
-			name = ProfileStoryboard;
-			sourceTree = "<group>";
-		};
-		7C9D40301DFCEBFC0012CF23 /* CategoryStoryboard */ = {
-			isa = PBXGroup;
-			children = (
-				7C9D40311DFCEC620012CF23 /* CategoryStoryboard.storyboard */,
-			);
-			name = CategoryStoryboard;
 			sourceTree = "<group>";
 		};
 		7CE6AD491DFC35E7002E72A7 /* Frameworks */ = {
@@ -290,6 +242,54 @@
 			children = (
 			);
 			name = TRDataManager;
+			sourceTree = "<group>";
+		};
+		8C13FCEB1DFD145F00D26D81 /* DetailRegisterStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C13FCEC1DFD145F00D26D81 /* DetailInfoStoryboard.storyboard */,
+			);
+			path = DetailRegisterStoryboard;
+			sourceTree = "<group>";
+		};
+		8C13FCEE1DFD14C300D26D81 /* CategoryStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C13FCEF1DFD14C300D26D81 /* CategoryStoryboard.storyboard */,
+			);
+			path = CategoryStoryboard;
+			sourceTree = "<group>";
+		};
+		8C13FCF11DFD14E200D26D81 /* CountryStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C13FCF21DFD14E200D26D81 /* CountryStoryboard.storyboard */,
+			);
+			path = CountryStoryboard;
+			sourceTree = "<group>";
+		};
+		8C13FCF41DFD150A00D26D81 /* DetailListStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C13FCF51DFD150A00D26D81 /* DetailListStoryboard.storyboard */,
+			);
+			path = DetailListStoryboard;
+			sourceTree = "<group>";
+		};
+		8C13FCF71DFD153000D26D81 /* BackupStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C13FCF81DFD153000D26D81 /* BackupStoryboard.storyboard */,
+			);
+			path = BackupStoryboard;
+			sourceTree = "<group>";
+		};
+		8C13FCFA1DFD155100D26D81 /* ProfileStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */,
+			);
+			path = ProfileStoryboard;
 			sourceTree = "<group>";
 		};
 		B6493FD91DF70F4300121528 /* Datas */ = {
@@ -409,15 +409,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C51E2641DE9CBF80037DB1B /* LaunchScreen.storyboard in Resources */,
-				7C9D40381DFCEC9B0012CF23 /* BackupStoryboard.storyboard in Resources */,
-				7C9D40321DFCEC620012CF23 /* CategoryStoryboard.storyboard in Resources */,
-				7C6EA47D1DFD0AC700660EB6 /* DetailInfoStoryboard.storyboard in Resources */,
+				8C13FCF01DFD14C300D26D81 /* CategoryStoryboard.storyboard in Resources */,
 				7C51E2611DE9CBF80037DB1B /* Assets.xcassets in Resources */,
-				7C9D40341DFCEC800012CF23 /* ProfileStoryboard.storyboard in Resources */,
-				7C9D403A1DFCECA40012CF23 /* DetailListStoryboard.storyboard in Resources */,
+				8C13FCF61DFD150A00D26D81 /* DetailListStoryboard.storyboard in Resources */,
 				7C51E25F1DE9CBF80037DB1B /* Main.storyboard in Resources */,
-				7C9D403C1DFCECB20012CF23 /* CountryStoryboard.storyboard in Resources */,
+				8C13FCED1DFD145F00D26D81 /* DetailInfoStoryboard.storyboard in Resources */,
+				8C13FCF31DFD14E200D26D81 /* CountryStoryboard.storyboard in Resources */,
 				7CE6AD691DFC5A7D002E72A7 /* tripDB.sqlite in Resources */,
+				8C13FCF91DFD153000D26D81 /* BackupStoryboard.storyboard in Resources */,
+				8C13FCFC1DFD155100D26D81 /* ProfileStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
