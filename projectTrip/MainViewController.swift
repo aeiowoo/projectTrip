@@ -33,6 +33,10 @@ class MainViewController: UIViewController {
         let titleImage = UIImage.init(named: "title1")
         self.navigationItem.titleView = UIImageView.init(image: titleImage)
         
+        //슬라이드 뷰 숨겨두기
+        //self.hiddenView.frame.origin = CGPoint(x: 0 - self.hiddenView.frame.size.width, y: 0)
+        //self.view.addSubview(hiddenView)
+        
     }
 
     @IBAction func onMenuButton(_ sender: UIBarButtonItem) {
