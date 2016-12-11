@@ -2,7 +2,7 @@
 //  NetworkManager.swift
 //  projectTrip
 //
-//  Created by 박은비 on 2016. 12. 4.
+//  Created by Eunbee on 2016. 12. 4.
 //  Copyright © 2016년 SwiftTive. All rights reserved.
 //
 

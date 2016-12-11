@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A5EEFB91DFD475200C42DF9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EEFB81DFD475200C42DF9 /* NetworkManager.swift */; };
 		7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */; };
 		7C51E25F1DE9CBF80037DB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E25D1DE9CBF80037DB1B /* Main.storyboard */; };
 		7C51E2611DE9CBF80037DB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E2601DE9CBF80037DB1B /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A5EEFB81DFD475200C42DF9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7C51E2561DE9CBF70037DB1B /* projectTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C51E25E1DE9CBF80037DB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A5EEFB71DFD474100C42DF9 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				7A5EEFB81DFD475200C42DF9 /* NetworkManager.swift */,
+			);
+			name = NetworkManager;
+			sourceTree = "<group>";
+		};
 		7C51E24D1DE9CBF60037DB1B = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		7CE6AD5E1DFC3784002E72A7 /* SuperClass */ = {
 			isa = PBXGroup;
 			children = (
+				7A5EEFB71DFD474100C42DF9 /* NetworkManager */,
 				7CE6AD601DFC37C4002E72A7 /* TRDataManager */,
 				7CE6AD5F1DFC37BC002E72A7 /* DBManager */,
 			);
@@ -446,6 +457,7 @@
 				7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */,
 				7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */,
 				B6B4FA841DFCF30C00A83ABD /* TripListViewController.swift in Sources */,
+				7A5EEFB91DFD475200C42DF9 /* NetworkManager.swift in Sources */,
 				7CE6AD5A1DFC3721002E72A7 /* FMResultSet.m in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */,
