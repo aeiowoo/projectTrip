@@ -10,42 +10,18 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    //숨겨진 뷰
-    @IBOutlet var hiddenView: UIView!
-    //테이븗 뷰
-    @IBOutlet var menuTableView: UITableView!
-    
-    //숨겨진 뷰에 쓰일 메뉴 데이터 구조체
-    struct menuData {
-        
-        let titleName : String
-        let imageName : String
-    }
-    
-    //전역 변수들
-    var _isSlideViewOpened = false
-    var data = [menuData]()
+    let transition = ModalAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //뷰가 보이기 전에 처리해야 할 것들
-        setDatas()
         createViewContents()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func setDatas() {
-        
-        data = [menuData(titleName: "카테고리 설정", imageName: "icon00"),
-                menuData(titleName: "본국 설정", imageName: "icon01"),
-                menuData(titleName: "백업/복구", imageName: "icon04"),
-                menuData(titleName: "평점/리뷰 남기기", imageName: "icon05"),
-                menuData(titleName: "버그 신고 및 제안", imageName: "icon06")]
     }
     
     func createViewContents() {
@@ -63,90 +39,34 @@ class MainViewController: UIViewController {
         
     }
 
-    // + (추가하기) 버튼
-    @IBAction func onAddButton(_ sender: UIBarButtonItem) {
-        
-        
-    }
-    
-    // 슬라이드 메뉴 버튼
     @IBAction func onMenuButton(_ sender: UIBarButtonItem) {
         
-        if !_isSlideViewOpened {
-            
-            openSlideView()
-        }
-        else {
-            
-            closeSlideView()
-        }
-        
-        _isSlideViewOpened = !_isSlideViewOpened
-    }
-    func openSlideView() {
-        
-        UIView.animate(withDuration: 0.7, animations: {
-            
-            self.hiddenView.frame.origin = CGPoint(x: 0, y: 0)
-        })
-    }
-    func closeSlideView() {
-        
-        UIView.animate(withDuration: 0.5, animations: {
-            
-            self.hiddenView.frame.origin = CGPoint(x: 0 - self.hiddenView.frame.size.width, y: 0)
-        })
-    }
-    
-    func showBlackView() {
-        
-        let blackView : UIView = UIView(frame: CGRect(origin: CGPoint(x: 0,y: 0), size: self.view.frame.size))
-        blackView.backgroundColor = UIColor.black
-        self.view.addSubview(blackView)
-    }
-    func hideBlackView() {
-        
-        
-    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "MenuSegue" {
-//            
-//            if let indexPath = self.menuTableView.indexPathForSelectedRow {
-//                
-//                let menuVC = segue.destination as! MenuViewController
-//                menuVC.data = data[indexPath.row]
-//            }
-//        }
-//    }
+        let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "ModalViewController") as! ModalViewController
+        modalVC.transitioningDelegate = self
+        modalVC.modalPresentationStyle = .custom
+        present(modalVC, animated: true, completion: nil)
 
+    }
+    
+    
 }
 
-extension MainViewController : UITableViewDataSource {
+extension MainViewController : UIViewControllerTransitioningDelegate {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        return 1
+        transition.isPresenting = true
+        
+        return transition
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        return data.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        transition.isPresenting = false
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell") as! MenuTableViewCell
-        
-        cell.menuLabel.text = data[indexPath.row].titleName
-        cell.imageView?.image = UIImage(named: data[indexPath.row].imageName)
-        
-        return cell
+        return transition
     }
 }
-
-
 
 
 

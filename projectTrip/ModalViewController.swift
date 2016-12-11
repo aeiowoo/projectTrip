@@ -28,9 +28,14 @@ class ModalViewController: UIViewController {
         setDatas()
     }
     
+    func actionClose(_ tap: UITapGestureRecognizer) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(actionClose(_:))))
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +57,11 @@ class ModalViewController: UIViewController {
                 MenuData(titleName: "평점/리뷰 남기기", imageName: "icon05"),
                 MenuData(titleName: "버그 신고 및 제안", imageName: "icon06")]
         
+    }
+    
+    @IBAction func dismissModal(_ sender: UISwipeGestureRecognizer) {
+        
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

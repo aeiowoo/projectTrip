@@ -34,6 +34,7 @@
 		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
 		B6A899911DF3D35300D57EDE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A899901DF3D35300D57EDE /* MainViewController.swift */; };
 		B6A899981DF663A000D57EDE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */; };
+		B6B4FA781DFA6F0600A83ABD /* ModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA771DFA6F0600A83ABD /* ModalAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
 		B6A899901DF3D35300D57EDE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B6A899971DF663A000D57EDE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		B6B4FA771DFA6F0600A83ABD /* ModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,14 @@
 			name = Datas;
 			sourceTree = "<group>";
 		};
+		B6B4FA441DF82F6C00A83ABD /* ProtocolFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B6B4FA771DFA6F0600A83ABD /* ModalAnimator.swift */,
+			);
+			name = ProtocolFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -466,6 +476,7 @@
 				B6493FD61DF6FC6600121528 /* CreateNewViewController.swift in Sources */,
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
 				B6A899981DF663A000D57EDE /* MenuTableViewCell.swift in Sources */,
+				B6B4FA781DFA6F0600A83ABD /* ModalAnimator.swift in Sources */,
 				B6493FD41DF6A11900121528 /* ModalViewController.swift in Sources */,
 				7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */,
 				7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */,

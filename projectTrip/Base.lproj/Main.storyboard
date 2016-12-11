@@ -32,6 +32,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="OnairTrip" id="8h9-bt-2x5">
                         <barButtonItem key="leftBarButtonItem" image="icon08" id="sDp-bO-B3N">
@@ -384,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9O-tW-kCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="791"/>
+            <point key="canvasLocation" x="3183.1999999999998" y="790.25487256371821"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cvQ-2c-3BP">
@@ -411,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9F-li-NW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2951" y="790"/>
+            <point key="canvasLocation" x="3888.8000000000002" y="789.35532233883066"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ixs-y1-VKX">
@@ -438,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mes-OS-SyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3650" y="790"/>
+            <point key="canvasLocation" x="4588" y="789.35532233883066"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="Uj3-cX-Ja7">
@@ -491,7 +492,7 @@
                                                 <connections>
                                                     <outlet property="menuImageView" destination="2v0-Ad-WZO" id="S3Q-Ok-exV"/>
                                                     <outlet property="menuLabel" destination="vdD-hf-F3j" id="Gjj-x2-6Pe"/>
-                                                    <segue destination="LkP-nL-UAb" kind="show" identifier="MenuSegue" id="hdt-Sv-r8W"/>
+                                                    <segue destination="LkP-nL-UAb" kind="show" identifier="MenuSegue" id="tUX-Iq-tcL"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -529,6 +530,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.29997859589041098" colorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.75"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bBO-Tn-5hZ" secondAttribute="trailing" constant="56" id="0c1-Yp-1dH"/>
                             <constraint firstItem="bBO-Tn-5hZ" firstAttribute="top" secondItem="MAf-6f-Ecy" secondAttribute="top" id="2YI-72-qjF"/>
@@ -568,6 +570,6 @@
         <image name="icon08" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WK5-1i-Npt"/>
+        <segue reference="hDq-vD-Lth"/>
     </inferredMetricsTieBreakers>
 </document>
