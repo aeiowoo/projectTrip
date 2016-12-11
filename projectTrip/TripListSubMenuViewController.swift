@@ -1,19 +1,18 @@
 //
-//  CreateNewViewController.swift
+//  TripListSubMenuViewController.swift
 //  projectTrip
 //
-//  Created by Friday on 2016. 12. 6..
+//  Created by Friday on 2016. 12. 11..
 //  Copyright © 2016년 SwiftTive. All rights reserved.
 //
 
 import UIKit
 
-class CreateNewViewController: UIViewController {
+class TripListSubMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        createViewContents()
         // Do any additional setup after loading the view.
     }
 
@@ -22,9 +21,6 @@ class CreateNewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func createViewContents() {
-        
-    }
 
     /*
     // MARK: - Navigation
