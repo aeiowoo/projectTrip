@@ -32,11 +32,7 @@ class TripListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        collectionInt = userDefaults.integer(forKey: "collectionInt")
-        print("\(collectionInt) 받아왔다")
-        
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.reloadData()
     }
     
     func createViewContents() {

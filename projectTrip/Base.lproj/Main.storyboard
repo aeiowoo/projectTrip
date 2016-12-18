@@ -111,6 +111,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-Q2-5nq">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="235"/>
                                                     <state key="normal" image="inputImage"/>
+                                                    <connections>
+                                                        <segue destination="wmg-4B-vLd" kind="show" id="wWZ-Qb-0qa"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -228,6 +231,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohi-DU-46o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2249" y="144"/>
+        </scene>
+        <!--DetailInfoStoryboard-->
+        <scene sceneID="mnh-UE-JDN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailInfoStoryboard" referencedIdentifier="DetailInfoStoryboard" id="wmg-4B-vLd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm0-Tb-y65" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="-638"/>
         </scene>
         <!--Trip List Sub Menu View Controller-->
         <scene sceneID="14C-x6-Qmf">
