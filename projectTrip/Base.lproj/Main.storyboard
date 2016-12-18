@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gnV-yh-I6t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gnV-yh-I6t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Main"/>
                                 <connections>
-                                    <segue destination="AFb-E1-Mvb" kind="show" id="P9U-eH-JCi"/>
+                                    <segue destination="AFb-E1-Mvb" kind="show" id="dYS-UJ-0K9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,35 +91,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-uh-vzq">
-                                <rect key="frame" x="26" y="617" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="J7z-hA-0F0" kind="presentation" modalPresentationStyle="overCurrentContext" id="FpN-mJ-g1b"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K81-Wc-Cgx">
-                                <rect key="frame" x="0.0" y="64" width="375" height="545"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="545" id="lc5-Jn-piL"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gtP-HU-Brh">
-                                    <size key="itemSize" width="187" height="198"/>
+                                    <size key="itemSize" width="185" height="235"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TripListCell" id="qdi-nq-J2J" customClass="TripListCollectionViewCell" customModule="projectTrip" customModuleProvider="target">
-                                        <rect key="frame" x="94" y="0.0" width="187" height="198"/>
+                                        <rect key="frame" x="95" y="0.0" width="185" height="235"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="187" height="198"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="235"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-Q2-5nq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="198"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="235"/>
                                                     <state key="normal" image="inputImage"/>
                                                 </button>
                                             </subviews>
@@ -140,20 +130,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Kqv-uh-vzq" firstAttribute="leading" secondItem="lSL-L4-vJ5" secondAttribute="leadingMargin" id="HKw-LS-G1V"/>
-                            <constraint firstItem="K81-Wc-Cgx" firstAttribute="leading" secondItem="lSL-L4-vJ5" secondAttribute="leading" id="mQX-0h-sNi"/>
-                            <constraint firstItem="K81-Wc-Cgx" firstAttribute="top" secondItem="YVc-sg-mRn" secondAttribute="bottom" id="muo-pi-cqb"/>
-                            <constraint firstItem="Kqv-uh-vzq" firstAttribute="top" secondItem="K81-Wc-Cgx" secondAttribute="bottom" constant="8" symbolic="YES" id="wEc-mc-d0z"/>
-                            <constraint firstAttribute="trailing" secondItem="K81-Wc-Cgx" secondAttribute="trailing" id="xtQ-2t-LAd"/>
+                            <constraint firstItem="K81-Wc-Cgx" firstAttribute="bottom" secondItem="YU8-fF-5Dg" secondAttribute="top" id="9He-U3-Wak"/>
+                            <constraint firstAttribute="trailing" secondItem="K81-Wc-Cgx" secondAttribute="trailing" id="c1G-Q4-Qwp"/>
+                            <constraint firstItem="K81-Wc-Cgx" firstAttribute="top" secondItem="lSL-L4-vJ5" secondAttribute="top" id="m48-Yn-UW0"/>
+                            <constraint firstItem="K81-Wc-Cgx" firstAttribute="leading" secondItem="lSL-L4-vJ5" secondAttribute="leading" id="s98-un-isK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hgN-NZ-9SJ">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Swo-tE-tzc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onMenuButton:" destination="AFb-E1-Mvb" id="vnb-kV-KKO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="haW-lK-AcL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="qBB-ba-8Y3" kind="presentation" identifier="titleInput" id="AXq-yg-2qd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="K81-Wc-Cgx" id="ZSN-PP-r2F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojg-gC-Feq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="-225.33733133433284"/>
+            <point key="canvasLocation" x="1360.8" y="-225.33733133433284"/>
         </scene>
         <!--Trip Title Input View Controller-->
         <scene sceneID="uE4-Il-4wc">
@@ -203,6 +206,7 @@
                             <constraint firstItem="UKm-CJ-GMn" firstAttribute="top" secondItem="OL8-tk-0hV" secondAttribute="bottom" constant="8" symbolic="YES" id="zHv-0c-99v"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iJK-DO-C3X"/>
                     <connections>
                         <outlet property="addButton" destination="UKm-CJ-GMn" id="Qtu-0F-uoH"/>
                         <outlet property="backgroundImage" destination="kDz-0y-J7Y" id="1wg-qx-QQB"/>
@@ -211,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohi-DU-46o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056.8000000000002" y="143.47826086956522"/>
+            <point key="canvasLocation" x="2249" y="144"/>
         </scene>
         <!--Trip List Sub Menu View Controller-->
         <scene sceneID="14C-x6-Qmf">
@@ -294,6 +298,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.30230629280821913" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="s8V-T2-KE0" firstAttribute="top" secondItem="PUY-5a-y3r" secondAttribute="top" id="3W0-EM-ung"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s8V-T2-KE0" secondAttribute="trailing" constant="45" id="8La-Md-czd"/>
@@ -310,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQJ-Yl-yMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056.8000000000002" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="2250" y="-543"/>
         </scene>
         <!--CategoryStoryboard-->
         <scene sceneID="W3g-Hr-6d6">
@@ -318,7 +323,7 @@
                 <viewControllerPlaceholder storyboardName="CategoryStoryboard" referencedIdentifier="CategoryStoryboard" id="VKS-0G-cmh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xO7-1P-oED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="-544"/>
+            <point key="canvasLocation" x="2949" y="-577"/>
         </scene>
         <!--CountryStoryboard-->
         <scene sceneID="tWm-W7-Zbc">

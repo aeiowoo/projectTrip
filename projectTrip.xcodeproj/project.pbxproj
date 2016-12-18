@@ -28,6 +28,7 @@
 		8C13FCF61DFD150A00D26D81 /* DetailListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCF51DFD150A00D26D81 /* DetailListStoryboard.storyboard */; };
 		8C13FCF91DFD153000D26D81 /* BackupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCF81DFD153000D26D81 /* BackupStoryboard.storyboard */; };
 		8C13FCFC1DFD155100D26D81 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */; };
+		B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124A1E06290F0037A191 /* TripModalAnimator.swift */; };
 		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
 		B6B4FA841DFCF30C00A83ABD /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */; };
 		B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */; };
@@ -89,6 +90,7 @@
 		8C13FCF51DFD150A00D26D81 /* DetailListStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailListStoryboard.storyboard; sourceTree = "<group>"; };
 		8C13FCF81DFD153000D26D81 /* BackupStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BackupStoryboard.storyboard; sourceTree = "<group>"; };
 		8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		B601124A1E06290F0037A191 /* TripModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModalAnimator.swift; sourceTree = "<group>"; };
 		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
 		B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
 		B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListSubMenuViewController.swift; sourceTree = "<group>"; };
@@ -196,12 +198,10 @@
 		7C9D40291DFCEA310012CF23 /* MainStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				B601124C1E062FF00037A191 /* SubClasses */,
 				7C51E25D1DE9CBF80037DB1B /* Main.storyboard */,
-				B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */,
 				B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */,
-				B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */,
 				B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */,
-				B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */,
 				B6C4E8741DFD1D0A003F8667 /* TripTitleInputViewController.swift */,
 			);
 			name = MainStoryboard;
@@ -315,6 +315,17 @@
 			path = ProfileStoryboard;
 			sourceTree = "<group>";
 		};
+		B601124C1E062FF00037A191 /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */,
+				B601124A1E06290F0037A191 /* TripModalAnimator.swift */,
+				B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */,
+				B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */,
+			);
+			name = SubClasses;
+			sourceTree = "<group>";
+		};
 		B6493FD91DF70F4300121528 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,7 +397,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = SwiftTive;
 				TargetAttributes = {
 					7C51E2551DE9CBF60037DB1B = {
@@ -474,6 +485,7 @@
 				7A5EEFB91DFD475200C42DF9 /* NetworkManager.swift in Sources */,
 				7CE6AD5A1DFC3721002E72A7 /* FMResultSet.m in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
+				B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */,
 				B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */,
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
 				B6C4E8771DFD2931003F8667 /* TripListCollectionViewCell.swift in Sources */,
@@ -552,6 +564,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -601,6 +614,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

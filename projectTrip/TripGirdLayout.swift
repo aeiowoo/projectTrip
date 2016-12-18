@@ -11,13 +11,14 @@ import UIKit
 class TripGirdLayout: UICollectionViewFlowLayout {
 
     var numberOfColumns : Int = 2
+    let userDefaults = UserDefaults.standard
     
     init(numberOfColumns : Int) {
         super.init()
+        
         self.numberOfColumns = numberOfColumns
         self.minimumLineSpacing = 0
         self.minimumInteritemSpacing = 0
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

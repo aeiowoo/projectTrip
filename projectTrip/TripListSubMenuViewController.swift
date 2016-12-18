@@ -45,6 +45,10 @@ class TripListSubMenuViewController: UIViewController {
         
     }
 
+    @IBAction func dismissView(_ sender: UITapGestureRecognizer) {
+        
+//        dismiss(animated: true, completion: nil)
+    }
     
 }
 
