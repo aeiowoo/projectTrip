@@ -17,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		DBManager.sharedInstance.getData()
+		//DBManager.sharedInstance.getData()
+
+		DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
+		DBManager.setData(query: "UPDATE TRIP_MASTER SET TITLE = \'프랑스\' WHERE TR_ID = \'2\'")
+		DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
+		
+		TRDataManager.getTripMasterDatas()
+		
 		
 		
 		return true

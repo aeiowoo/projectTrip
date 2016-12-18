@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2668D71E0572C400FD4DD4 /* TripMasterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2668D61E0572C400FD4DD4 /* TripMasterData.swift */; };
+		7C2668DB1E05731200FD4DD4 /* TRDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2668DA1E05731200FD4DD4 /* TRDataExtension.swift */; };
+		7C2668DD1E05731A00FD4DD4 /* TRDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2668DC1E05731A00FD4DD4 /* TRDataManager.swift */; };
+		7C2668DF1E05738D00FD4DD4 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2668DE1E05738D00FD4DD4 /* Define.swift */; };
+		7C2668E21E05789D00FD4DD4 /* TripDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2668E11E05789D00FD4DD4 /* TripDetailData.swift */; };
+		7C2668E51E057ADC00FD4DD4 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2668E41E057ADC00FD4DD4 /* CountryData.swift */; };
 		7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */; };
 		7C51E25F1DE9CBF80037DB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E25D1DE9CBF80037DB1B /* Main.storyboard */; };
 		7C51E2611DE9CBF80037DB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E2601DE9CBF80037DB1B /* Assets.xcassets */; };
@@ -50,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C2668D61E0572C400FD4DD4 /* TripMasterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMasterData.swift; sourceTree = "<group>"; };
+		7C2668DA1E05731200FD4DD4 /* TRDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRDataExtension.swift; sourceTree = "<group>"; };
+		7C2668DC1E05731A00FD4DD4 /* TRDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRDataManager.swift; sourceTree = "<group>"; };
+		7C2668DE1E05738D00FD4DD4 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		7C2668E11E05789D00FD4DD4 /* TripDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailData.swift; sourceTree = "<group>"; };
+		7C2668E41E057ADC00FD4DD4 /* CountryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		7C51E2561DE9CBF70037DB1B /* projectTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C51E25E1DE9CBF80037DB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +126,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C2668D51E05729800FD4DD4 /* Data Class */ = {
+			isa = PBXGroup;
+			children = (
+				7C2668E41E057ADC00FD4DD4 /* CountryData.swift */,
+				7C2668D61E0572C400FD4DD4 /* TripMasterData.swift */,
+				7C2668E11E05789D00FD4DD4 /* TripDetailData.swift */,
+			);
+			name = "Data Class";
+			sourceTree = "<group>";
+		};
+		7C2668D91E0572ED00FD4DD4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7C2668DA1E05731200FD4DD4 /* TRDataExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		7C51E24D1DE9CBF60037DB1B = {
 			isa = PBXGroup;
 			children = (
@@ -271,8 +301,10 @@
 		7CE6AD5E1DFC3784002E72A7 /* SuperClass */ = {
 			isa = PBXGroup;
 			children = (
+				7C2668D91E0572ED00FD4DD4 /* Extension */,
 				7CE6AD601DFC37C4002E72A7 /* TRDataManager */,
 				7CE6AD5F1DFC37BC002E72A7 /* DBManager */,
+				7C2668DE1E05738D00FD4DD4 /* Define.swift */,
 			);
 			name = SuperClass;
 			sourceTree = "<group>";
@@ -288,6 +320,8 @@
 		7CE6AD601DFC37C4002E72A7 /* TRDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				7C2668D51E05729800FD4DD4 /* Data Class */,
+				7C2668DC1E05731A00FD4DD4 /* TRDataManager.swift */,
 			);
 			name = TRDataManager;
 			sourceTree = "<group>";
@@ -310,6 +344,7 @@
 				7C51E2521DE9CBF60037DB1B /* Sources */,
 				7C51E2531DE9CBF60037DB1B /* Frameworks */,
 				7C51E2541DE9CBF60037DB1B /* Resources */,
+				7C2668E01E0575ED00FD4DD4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -438,16 +473,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C2668E01E0575ED00FD4DD4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:|ERROR:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C51E2521DE9CBF60037DB1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */,
+				7C2668DB1E05731200FD4DD4 /* TRDataExtension.swift in Sources */,
 				7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */,
+				7C2668DD1E05731A00FD4DD4 /* TRDataManager.swift in Sources */,
 				7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */,
 				B6B4FA841DFCF30C00A83ABD /* TripListViewController.swift in Sources */,
+				7C2668DF1E05738D00FD4DD4 /* Define.swift in Sources */,
+				7C2668D71E0572C400FD4DD4 /* TripMasterData.swift in Sources */,
+				7C2668E21E05789D00FD4DD4 /* TripDetailData.swift in Sources */,
 				7CE6AD5A1DFC3721002E72A7 /* FMResultSet.m in Sources */,
+				7C2668E51E057ADC00FD4DD4 /* CountryData.swift in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */,
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
