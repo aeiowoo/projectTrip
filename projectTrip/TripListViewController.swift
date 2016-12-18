@@ -32,6 +32,7 @@ class TripListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        collectionInt = userDefaults.integer(forKey: "collectionInt")
         collectionView.reloadData()
     }
     
@@ -96,8 +97,6 @@ extension TripListViewController : UIViewControllerTransitioningDelegate {
 extension TripListViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        print("기둥을 만들었다.")
         
         return collectionInt
     }

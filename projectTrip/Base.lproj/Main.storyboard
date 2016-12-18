@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojg-gC-Feq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360.8" y="-225.33733133433284"/>
+            <point key="canvasLocation" x="1170" y="-225"/>
         </scene>
         <!--Trip Title Input View Controller-->
         <scene sceneID="uE4-Il-4wc">
@@ -175,26 +175,20 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputImage" translatesAutoresizingMaskIntoConstraints="NO" id="kDz-0y-J7Y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="SsO-1I-9Ew"/>
+                                    <constraint firstAttribute="height" constant="667" id="xlV-mh-BcR"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="여행 제목을 입력해주세요" textAlignment="center" minimumFontSize="17" background="chat00" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OL8-tk-0hV">
-                                <rect key="frame" x="29" y="300" width="316" height="45"/>
+                                <rect key="frame" x="30" y="292" width="314" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Z81-eK-zxv"/>
+                                    <constraint firstAttribute="height" constant="45" id="fU2-mZ-Nor"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKm-CJ-GMn">
-                                <rect key="frame" x="29" y="353" width="316" height="46"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="여행 추가하기" backgroundImage="chat01">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onAddButton:" destination="qBB-ba-8Y3" eventType="touchUpInside" id="oBe-qg-l13"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUu-8f-7h5">
                                 <rect key="frame" x="329" y="28" width="30" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -205,20 +199,33 @@
                                     <action selector="dismissButton:" destination="qBB-ba-8Y3" eventType="touchUpInside" id="vfI-x6-LYF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKm-CJ-GMn">
+                                <rect key="frame" x="29" y="353" width="316" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="v7v-bW-lxg"/>
+                                </constraints>
+                                <state key="normal" title="여행 추가하기" backgroundImage="chat01">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddButton:" destination="qBB-ba-8Y3" eventType="touchUpInside" id="oBe-qg-l13"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="top" secondItem="gT4-5E-twd" secondAttribute="bottom" constant="280" id="9LR-hS-NUF"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="trailing" secondItem="UKm-CJ-GMn" secondAttribute="trailing" id="DNo-JU-0De"/>
-                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="bottom" secondItem="Q3B-J5-n7V" secondAttribute="top" id="Hlh-xE-oCl"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="leading" secondItem="UKm-CJ-GMn" secondAttribute="leading" id="MSS-ae-PRh"/>
-                            <constraint firstItem="HUu-8f-7h5" firstAttribute="top" secondItem="gT4-5E-twd" secondAttribute="bottom" constant="8" id="ZGz-6r-OK6"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="centerX" secondItem="VXB-hS-P7p" secondAttribute="centerX" id="a4a-64-7KW"/>
-                            <constraint firstItem="Q3B-J5-n7V" firstAttribute="top" secondItem="UKm-CJ-GMn" secondAttribute="bottom" constant="268" id="fI9-AZ-nOj"/>
-                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leading" id="hVd-Yr-zkY"/>
-                            <constraint firstAttribute="trailing" secondItem="HUu-8f-7h5" secondAttribute="trailing" constant="16" id="oiG-7G-3iu"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leadingMargin" constant="13" id="xkx-ue-1bN"/>
-                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="top" secondItem="OL8-tk-0hV" secondAttribute="bottom" constant="8" symbolic="YES" id="zHv-0c-99v"/>
+                            <constraint firstItem="OL8-tk-0hV" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leadingMargin" constant="14" id="126-Dw-zpE"/>
+                            <constraint firstItem="OL8-tk-0hV" firstAttribute="centerX" secondItem="kDz-0y-J7Y" secondAttribute="centerX" id="50W-mN-bwq"/>
+                            <constraint firstItem="Q3B-J5-n7V" firstAttribute="top" secondItem="UKm-CJ-GMn" secondAttribute="bottom" constant="269" id="59d-jH-c11"/>
+                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="top" secondItem="OL8-tk-0hV" secondAttribute="bottom" constant="16" id="IDQ-aO-2F3"/>
+                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leading" id="KnL-2O-vbr"/>
+                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leadingMargin" constant="13" id="LgP-xB-qvm"/>
+                            <constraint firstAttribute="trailing" secondItem="kDz-0y-J7Y" secondAttribute="trailing" id="NTG-YQ-arY"/>
+                            <constraint firstItem="HUu-8f-7h5" firstAttribute="top" secondItem="gT4-5E-twd" secondAttribute="bottom" constant="8" id="Q5R-z2-ccX"/>
+                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="top" secondItem="VXB-hS-P7p" secondAttribute="top" id="biW-5Y-maD"/>
+                            <constraint firstItem="Q3B-J5-n7V" firstAttribute="top" secondItem="kDz-0y-J7Y" secondAttribute="bottom" id="cnB-UI-BaI"/>
+                            <constraint firstItem="OL8-tk-0hV" firstAttribute="centerX" secondItem="UKm-CJ-GMn" secondAttribute="centerX" id="rAg-Ov-Xif"/>
+                            <constraint firstAttribute="trailing" secondItem="HUu-8f-7h5" secondAttribute="trailing" constant="16" id="s6X-fs-Tg0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iJK-DO-C3X"/>
@@ -230,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohi-DU-46o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249" y="144"/>
+            <point key="canvasLocation" x="1948" y="250"/>
         </scene>
         <!--DetailInfoStoryboard-->
         <scene sceneID="mnh-UE-JDN">
@@ -238,7 +245,7 @@
                 <viewControllerPlaceholder storyboardName="DetailInfoStoryboard" referencedIdentifier="DetailInfoStoryboard" id="wmg-4B-vLd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bm0-Tb-y65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="-638"/>
+            <point key="canvasLocation" x="1341" y="-777"/>
         </scene>
         <!--Trip List Sub Menu View Controller-->
         <scene sceneID="14C-x6-Qmf">
@@ -296,7 +303,7 @@
                                                 <connections>
                                                     <outlet property="tripListSubImage" destination="0Q4-YR-hFv" id="I6l-1L-7gr"/>
                                                     <outlet property="tripListSubLabel" destination="JXc-u7-edE" id="eWs-A2-TmY"/>
-                                                    <segue destination="VKS-0G-cmh" kind="presentation" id="CZa-n7-TaO"/>
+                                                    <segue destination="dgm-pW-pn9" kind="show" id="lfC-c4-69c"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -332,21 +339,43 @@
                             <constraint firstItem="s8V-T2-KE0" firstAttribute="bottom" secondItem="Dvy-AX-5QJ" secondAttribute="top" id="eGN-U9-Acd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SGS-VO-0sh"/>
                     <connections>
                         <outlet property="tripListSubMenuTabelView" destination="NaA-68-o4s" id="nVc-ly-58p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQJ-Yl-yMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250" y="-543"/>
+            <point key="canvasLocation" x="1949" y="-508"/>
         </scene>
-        <!--CategoryStoryboard-->
-        <scene sceneID="W3g-Hr-6d6">
+        <!--카테고리 설정-->
+        <scene sceneID="Ijs-vb-rv9">
             <objects>
-                <viewControllerPlaceholder storyboardName="CategoryStoryboard" referencedIdentifier="CategoryStoryboard" id="VKS-0G-cmh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xO7-1P-oED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="TripCategorySettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lL7-4M-mNh" customClass="TripCategorySettingViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="noQ-N9-TKg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q6C-7S-WLt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LBj-ej-Hb2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="카테고리 설정" id="BCa-eR-qfM">
+                        <barButtonItem key="leftBarButtonItem" title="편집" id="ZBY-4d-P1V">
+                            <color key="tintColor" red="1" green="0.99058406519999997" blue="0.97418137179999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="확인" id="bkm-1F-gov">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="dismiss:" destination="lL7-4M-mNh" id="5pz-mJ-YlV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voL-kt-Ask" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2949" y="-577"/>
+            <point key="canvasLocation" x="3280.8000000000002" y="-510.49475262368821"/>
         </scene>
         <!--CountryStoryboard-->
         <scene sceneID="tWm-W7-Zbc">
@@ -405,6 +434,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x71-Ue-FG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-916" y="-225.33733133433284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NFb-Ln-vql">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dgm-pW-pn9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Mf-gX-Moq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lL7-4M-mNh" kind="relationship" relationship="rootViewController" id="pcl-Io-MMo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58u-pE-179" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="-510"/>
         </scene>
     </scenes>
     <resources>
