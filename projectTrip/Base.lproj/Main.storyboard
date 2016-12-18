@@ -245,7 +245,7 @@
                 <viewControllerPlaceholder storyboardName="DetailInfoStoryboard" referencedIdentifier="DetailInfoStoryboard" id="wmg-4B-vLd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bm0-Tb-y65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="-777"/>
+            <point key="canvasLocation" x="1342" y="-673"/>
         </scene>
         <!--Trip List Sub Menu View Controller-->
         <scene sceneID="14C-x6-Qmf">
@@ -359,9 +359,27 @@
                     <view key="view" contentMode="scaleToFill" id="LBj-ej-Hb2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq1-Nf-uDa">
+                                <rect key="frame" x="19" y="92" width="337" height="51"/>
+                                <state key="normal" title="카테고리 추가하기" backgroundImage="chat01">
+                                    <color key="titleColor" red="1" green="0.99058406519999997" blue="0.97418137179999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="W9h-ec-Y1m" kind="show" id="lGg-tO-3XE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91167198140000005" green="0.92069843669999996" blue="0.92069843669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pq1-Nf-uDa" firstAttribute="top" secondItem="noQ-N9-TKg" secondAttribute="bottom" constant="28" id="2GO-YM-qUY"/>
+                            <constraint firstItem="Pq1-Nf-uDa" firstAttribute="centerX" secondItem="LBj-ej-Hb2" secondAttribute="centerX" id="4ON-cq-TLq"/>
+                            <constraint firstItem="Pq1-Nf-uDa" firstAttribute="leading" secondItem="LBj-ej-Hb2" secondAttribute="leading" constant="19" id="QxI-3H-RD5"/>
+                            <constraint firstAttribute="trailing" secondItem="Pq1-Nf-uDa" secondAttribute="trailing" constant="19" id="esZ-GH-IIX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="카테고리 설정" id="BCa-eR-qfM">
+                        <barButtonItem key="backBarButtonItem" title="카테고리 설정" id="MLA-Rr-yUG"/>
                         <barButtonItem key="leftBarButtonItem" title="편집" id="ZBY-4d-P1V">
                             <color key="tintColor" red="1" green="0.99058406519999997" blue="0.97418137179999997" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -375,7 +393,118 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voL-kt-Ask" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3280.8000000000002" y="-510.49475262368821"/>
+            <point key="canvasLocation" x="3301.5999999999999" y="-510.49475262368821"/>
+        </scene>
+        <!--카테고리 설정-->
+        <scene sceneID="cde-je-IRi">
+            <objects>
+                <viewController id="W9h-ec-Y1m" customClass="TripCategoryInputViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tXt-z6-wtS"/>
+                        <viewControllerLayoutGuide type="bottom" id="lns-3M-Fjq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="74k-sM-5os">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ii0-RF-uaZ">
+                                <rect key="frame" x="104" y="119" width="28" height="28"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="RVy-4g-7vh"/>
+                                    <constraint firstAttribute="height" constant="28" id="hf0-PC-1Uz"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="jtg-va-pE2" kind="show" id="viB-FL-IUL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkL-Yc-5fY">
+                                <rect key="frame" x="221" y="96" width="75" height="75"/>
+                                <color key="backgroundColor" red="0.29048737660000001" green="0.71885524950000002" blue="0.95926047120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="BRI-Yb-cnJ"/>
+                                    <constraint firstAttribute="width" constant="75" id="hEF-OJ-C3B"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="d7e-Re-aZy" kind="show" id="QYk-nX-XU7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="카테고리명" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BAa-SL-cbq">
+                                <rect key="frame" x="27" y="196" width="321" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="HeP-uB-2tf"/>
+                                    <constraint firstAttribute="height" constant="30" id="vLf-Rg-TMV"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91167198142460049" green="0.92069843668623019" blue="0.92069843668623019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YkL-Yc-5fY" firstAttribute="top" secondItem="tXt-z6-wtS" secondAttribute="bottom" constant="32" id="7g9-md-mL0"/>
+                            <constraint firstItem="BAa-SL-cbq" firstAttribute="leading" secondItem="74k-sM-5os" secondAttribute="leading" constant="27" id="HKo-3Q-nlr"/>
+                            <constraint firstAttribute="trailing" secondItem="BAa-SL-cbq" secondAttribute="trailing" constant="27" id="RxA-AE-8QQ"/>
+                            <constraint firstItem="Ii0-RF-uaZ" firstAttribute="leading" secondItem="74k-sM-5os" secondAttribute="leading" constant="104" id="Yaq-CY-btl"/>
+                            <constraint firstItem="BAa-SL-cbq" firstAttribute="top" secondItem="YkL-Yc-5fY" secondAttribute="bottom" constant="25" id="mXo-m3-kqz"/>
+                            <constraint firstAttribute="trailing" secondItem="YkL-Yc-5fY" secondAttribute="trailing" constant="79" id="wH3-SI-SvL"/>
+                            <constraint firstItem="Ii0-RF-uaZ" firstAttribute="top" secondItem="tXt-z6-wtS" secondAttribute="bottom" constant="55" id="wxe-2n-Gpy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="카테고리 설정" id="xky-9J-vNs">
+                        <barButtonItem key="backBarButtonItem" title="카테고리 설정" id="4WD-8m-Bxp"/>
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="Cjg-gr-y3T">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="completeButton:" destination="W9h-ec-Y1m" id="P9k-cg-RF2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorButton" destination="YkL-Yc-5fY" id="GUA-d3-ctJ"/>
+                        <outlet property="iconButton" destination="Ii0-RF-uaZ" id="QQD-t3-A9A"/>
+                        <outlet property="textField" destination="BAa-SL-cbq" id="osm-5E-n4f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4F-qB-0i8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4153" y="-510"/>
+        </scene>
+        <!--Trip Category Icon List View Controller-->
+        <scene sceneID="nzn-Zi-lVs">
+            <objects>
+                <viewController id="jtg-va-pE2" customClass="TripCategoryIconListViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fdz-Ee-SUs"/>
+                        <viewControllerLayoutGuide type="bottom" id="BWd-ls-K1N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qih-d8-MVz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.91167198140000005" green="0.92069843669999996" blue="0.92069843669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coe-Mo-KZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5081" y="-852"/>
+        </scene>
+        <!--Trip Category Color List View Controller-->
+        <scene sceneID="fmi-v3-nfk">
+            <objects>
+                <viewController id="d7e-Re-aZy" customClass="TripCategoryColorListViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oE7-RN-cWj"/>
+                        <viewControllerLayoutGuide type="bottom" id="iVA-ew-HoY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C4e-P4-zzo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.91167198140000005" green="0.92069843669999996" blue="0.92069843669999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LiB-Gx-ls6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5081" y="-177"/>
         </scene>
         <!--CountryStoryboard-->
         <scene sceneID="tWm-W7-Zbc">
