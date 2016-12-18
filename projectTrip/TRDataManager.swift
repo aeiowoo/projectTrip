@@ -89,10 +89,10 @@ class TRDataManager
 		return nil
 	}
 	
-	class func getTripDetailDatas() -> Array<TripDetailData>
-	{
-		
-	}
+//	class func getTripDetailDatas() -> Array<TripDetailData>
+//	{
+//		
+//	}
 	
 	class func getTripDetailData(id: Int) -> TripDetailData?
 	{
@@ -225,8 +225,8 @@ class TRDataManager
 	
 	
 	//MARK: Getting Country data
-	class func getCountryDatas() -> Array<CountryData>
-	{
-		
-	}
+//	class func getCountryDatas() -> Array<CountryData>
+//	{
+//		
+//	}
 }
