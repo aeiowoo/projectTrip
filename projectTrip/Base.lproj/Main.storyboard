@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -175,26 +176,21 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputImage" translatesAutoresizingMaskIntoConstraints="NO" id="kDz-0y-J7Y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="SsO-1I-9Ew"/>
+                                    <constraint firstAttribute="height" constant="667" id="xlV-mh-BcR"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="여행 제목을 입력해주세요" textAlignment="center" minimumFontSize="17" background="chat00" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OL8-tk-0hV">
-                                <rect key="frame" x="29" y="300" width="316" height="45"/>
+                                <rect key="frame" x="30" y="292" width="314" height="44.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Z81-eK-zxv"/>
+                                    <constraint firstAttribute="width" secondItem="OL8-tk-0hV" secondAttribute="height" multiplier="157:22" constant="-3.568181818181813" id="h0v-7N-5Gm"/>
+                                    <constraint firstAttribute="width" secondItem="OL8-tk-0hV" secondAttribute="height" multiplier="316:45" constant="1.51111111111112" id="qle-7x-Wfi"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKm-CJ-GMn">
-                                <rect key="frame" x="29" y="353" width="316" height="46"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="여행 추가하기" backgroundImage="chat01">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onAddButton:" destination="qBB-ba-8Y3" eventType="touchUpInside" id="oBe-qg-l13"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUu-8f-7h5">
                                 <rect key="frame" x="329" y="28" width="30" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -205,20 +201,37 @@
                                     <action selector="dismissButton:" destination="qBB-ba-8Y3" eventType="touchUpInside" id="vfI-x6-LYF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKm-CJ-GMn">
+                                <rect key="frame" x="29" y="353" width="316" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UKm-CJ-GMn" secondAttribute="height" multiplier="316:45" id="MV0-kV-Zez"/>
+                                    <constraint firstAttribute="width" secondItem="UKm-CJ-GMn" secondAttribute="height" multiplier="316:45" id="Mcs-Lj-8yg"/>
+                                </constraints>
+                                <state key="normal" title="여행 추가하기" backgroundImage="chat01">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddButton:" destination="qBB-ba-8Y3" eventType="touchUpInside" id="oBe-qg-l13"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="top" secondItem="gT4-5E-twd" secondAttribute="bottom" constant="280" id="9LR-hS-NUF"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="trailing" secondItem="UKm-CJ-GMn" secondAttribute="trailing" id="DNo-JU-0De"/>
-                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="bottom" secondItem="Q3B-J5-n7V" secondAttribute="top" id="Hlh-xE-oCl"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="leading" secondItem="UKm-CJ-GMn" secondAttribute="leading" id="MSS-ae-PRh"/>
-                            <constraint firstItem="HUu-8f-7h5" firstAttribute="top" secondItem="gT4-5E-twd" secondAttribute="bottom" constant="8" id="ZGz-6r-OK6"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="centerX" secondItem="VXB-hS-P7p" secondAttribute="centerX" id="a4a-64-7KW"/>
-                            <constraint firstItem="Q3B-J5-n7V" firstAttribute="top" secondItem="UKm-CJ-GMn" secondAttribute="bottom" constant="268" id="fI9-AZ-nOj"/>
-                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leading" id="hVd-Yr-zkY"/>
-                            <constraint firstAttribute="trailing" secondItem="HUu-8f-7h5" secondAttribute="trailing" constant="16" id="oiG-7G-3iu"/>
-                            <constraint firstItem="OL8-tk-0hV" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leadingMargin" constant="13" id="xkx-ue-1bN"/>
-                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="top" secondItem="OL8-tk-0hV" secondAttribute="bottom" constant="8" symbolic="YES" id="zHv-0c-99v"/>
+                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="height" secondItem="OL8-tk-0hV" secondAttribute="height" id="5E2-1Y-UI9"/>
+                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leading" id="KnL-2O-vbr"/>
+                            <constraint firstAttribute="trailing" secondItem="kDz-0y-J7Y" secondAttribute="trailing" id="NTG-YQ-arY"/>
+                            <constraint firstItem="OL8-tk-0hV" firstAttribute="centerY" secondItem="VXB-hS-P7p" secondAttribute="centerY" constant="-19.25" id="Oee-oj-aGF"/>
+                            <constraint firstItem="HUu-8f-7h5" firstAttribute="top" secondItem="gT4-5E-twd" secondAttribute="bottom" constant="8" id="Q5R-z2-ccX"/>
+                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="width" secondItem="OL8-tk-0hV" secondAttribute="width" constant="2" id="V9G-4o-nBT"/>
+                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="centerY" secondItem="VXB-hS-P7p" secondAttribute="centerY" constant="42" id="W8J-f0-24k"/>
+                            <constraint firstItem="kDz-0y-J7Y" firstAttribute="top" secondItem="VXB-hS-P7p" secondAttribute="top" id="biW-5Y-maD"/>
+                            <constraint firstItem="Q3B-J5-n7V" firstAttribute="top" secondItem="kDz-0y-J7Y" secondAttribute="bottom" id="cnB-UI-BaI"/>
+                            <constraint firstItem="OL8-tk-0hV" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leading" constant="30" id="efa-Jc-jgv"/>
+                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="leading" secondItem="VXB-hS-P7p" secondAttribute="leading" constant="29" id="fpc-59-AIo"/>
+                            <constraint firstItem="UKm-CJ-GMn" firstAttribute="top" secondItem="OL8-tk-0hV" secondAttribute="bottom" constant="16.5" id="jcA-x9-cvI"/>
+                            <constraint firstAttribute="trailing" secondItem="OL8-tk-0hV" secondAttribute="trailing" constant="31" id="mug-K9-kdS"/>
+                            <constraint firstAttribute="trailing" secondItem="UKm-CJ-GMn" secondAttribute="trailing" constant="30" id="qAy-fc-6yo"/>
+                            <constraint firstAttribute="trailing" secondItem="HUu-8f-7h5" secondAttribute="trailing" constant="16" id="s6X-fs-Tg0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iJK-DO-C3X"/>
@@ -230,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohi-DU-46o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249" y="144"/>
+            <point key="canvasLocation" x="2248.8000000000002" y="143.47826086956522"/>
         </scene>
         <!--DetailInfoStoryboard-->
         <scene sceneID="mnh-UE-JDN">
