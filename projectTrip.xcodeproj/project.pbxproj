@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7A5EEFB91DFD475200C42DF9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EEFB81DFD475200C42DF9 /* NetworkManager.swift */; };
+		7ADD91F61E0652660014D9DC /* TripBudgetInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD91F41E0652660014D9DC /* TripBudgetInputViewController.swift */; };
+		7ADD91F71E0652660014D9DC /* TripProfileInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD91F51E0652660014D9DC /* TripProfileInputViewController.swift */; };
 		7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */; };
 		7C51E25F1DE9CBF80037DB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E25D1DE9CBF80037DB1B /* Main.storyboard */; };
 		7C51E2611DE9CBF80037DB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C51E2601DE9CBF80037DB1B /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		7A5EEFB81DFD475200C42DF9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7ADD91F41E0652660014D9DC /* TripBudgetInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripBudgetInputViewController.swift; sourceTree = "<group>"; };
+		7ADD91F51E0652660014D9DC /* TripProfileInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripProfileInputViewController.swift; sourceTree = "<group>"; };
 		7C51E2561DE9CBF70037DB1B /* projectTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C51E2591DE9CBF70037DB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C51E25E1DE9CBF80037DB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 		8C13FCFA1DFD155100D26D81 /* ProfileStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				7ADD91F41E0652660014D9DC /* TripBudgetInputViewController.swift */,
+				7ADD91F51E0652660014D9DC /* TripProfileInputViewController.swift */,
 				8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */,
 			);
 			path = ProfileStoryboard;
@@ -478,6 +484,7 @@
 			files = (
 				B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */,
 				B6C4E8751DFD1D0A003F8667 /* TripTitleInputViewController.swift in Sources */,
+				7ADD91F71E0652660014D9DC /* TripProfileInputViewController.swift in Sources */,
 				B6C4E8791DFD2B7C003F8667 /* TripGirdLayout.swift in Sources */,
 				7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */,
 				7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */,
@@ -492,6 +499,7 @@
 				7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */,
 				B6C4E8731DFD15C5003F8667 /* TripListSubTableViewCell.swift in Sources */,
 				7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */,
+				7ADD91F61E0652660014D9DC /* TripBudgetInputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
