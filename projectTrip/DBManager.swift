@@ -7,71 +7,102 @@
 //
 
 import Foundation
-import UIKit
 
-class DBManager {
-	static let sharedInstance: DBManager = DBManager()
+let DB_FILE_NAME: String = "tripDB"
+let DB_FILE_TYPE: String = ".sqlite"
+let DB_FILE_FULLNAME: String = DB_FILE_NAME + DB_FILE_TYPE
+
+class DBManager
+{
+	//싱글톤 매니저 변수
+	static private let sharedInstance: DBManager = DBManager()
 	
 	private var trDB: FMDatabase? = nil
 	
-	private init() {
-		
-		let fileMgr = FileManager.default
-		let dirPaths = fileMgr.urls(for: .documentDirectory, in: .userDomainMask)
-		let dbPath = dirPaths[0].appendingPathComponent("tripDB.sqlite").path
-		
-		copyFile(fileName: "tripDB.sqlite")
-		
-		debugPrint("init")
-		debugPrint(dbPath)
-		if fileMgr.fileExists(atPath: dbPath as String) {
-
-			debugPrint("file exists")
-			trDB = FMDatabase(path: dbPath as String)
-			if(trDB!.open()) {
-			
-				debugPrint("open success")
-				let querySQL = "SELECT * FROM TRIP_MASTER"
-				
-				let results: FMResultSet = (trDB!.executeQuery(querySQL, withArgumentsIn: nil))!
-				
-				while results.next() == true {
-					
-					debugPrint(results.columnCount())
-					
-					let str1: String? = results.string(forColumnIndex: 0)
-					let str2: String? = results.string(forColumnIndex: 1)
-					
-					let str3: String? = results.string(forColumn: "TITLE")
-					
-					debugPrint(str1!)
-					debugPrint(str2!)
-					debugPrint(str3!)
-				}
-				
-			}
-		}
-	}
-	
-	func getData() {
-		
-	}
-	
-	func copyFile(fileName: NSString) {
-		
-		let bundlePath = Bundle.main.path(forResource: "tripDB", ofType: ".sqlite")
-		let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+	private class func copyFile() -> Bool
+	{
 		let fileManager = FileManager.default
-		let fullDestPath = URL(fileURLWithPath: destPath).appendingPathComponent("tripDB.sqlite")
-		if fileManager.fileExists(atPath: fullDestPath.path){
-			print("Database file is exist")
-			print(fileManager.fileExists(atPath: bundlePath!))
-		}else{
-			do{
-				try fileManager.copyItem(atPath: bundlePath!, toPath: fullDestPath.path)
-			}catch{
-				print("\n",error)
+		let localDBpath = Bundle.main.path(forResource: DB_FILE_NAME, ofType: DB_FILE_TYPE)
+		let deviceDocPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+		let deviceDBpath = URL(fileURLWithPath: deviceDocPath).appendingPathComponent(DB_FILE_FULLNAME)
+		
+		if fileManager.fileExists(atPath: deviceDBpath.path)
+		{
+			return false
+		}
+		else
+		{
+			do
+			{
+				try fileManager.copyItem(atPath: localDBpath!, toPath: deviceDBpath.path)
+			}
+			catch
+			{
+				return false
+			}
+			return true
+		}
+	}
+	
+	class func getData(query: String) -> Array<Array<String>>?
+	{
+		var dataArr: Array<Array<String>>? = nil
+		
+		if !DBManager.copyFile()
+		{
+			debugPrint("DB file copy failed")
+		}
+		
+		let fileManager = FileManager.default
+		let deviceDocPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+		let deviceDBpath = URL(fileURLWithPath: deviceDocPath).appendingPathComponent(DB_FILE_FULLNAME)
+		
+		if fileManager.fileExists(atPath: deviceDBpath.path)
+		{
+			sharedInstance.trDB = FMDatabase(path: deviceDBpath.path)
+			if (sharedInstance.trDB?.open())!
+			{
+				dataArr = Array<Array<String>>()
+				let queryResults: FMResultSet = (sharedInstance.trDB!.executeQuery(query, withArgumentsIn: nil))!
+
+				while queryResults.next() == true
+				{
+					var oneRowData = Array<String>()
+					for index in 0...queryResults.columnCount() - 1
+					{
+						let oneColumnData = queryResults.string(forColumnIndex: index) ?? ""
+						oneRowData.append(oneColumnData)
+					}
+					dataArr!.append(oneRowData)
+				}
+				debugPrint(dataArr!)
 			}
 		}
+		return dataArr
+	}
+	
+	class func setData(query: String) -> Bool
+	{
+		if !DBManager.copyFile()
+		{
+			debugPrint("DB file copy failed")
+		}
+		
+		let fileManager = FileManager.default
+		let deviceDocPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+		let deviceDBpath = URL(fileURLWithPath: deviceDocPath).appendingPathComponent(DB_FILE_FULLNAME)
+		
+		if fileManager.fileExists(atPath: deviceDBpath.path)
+		{
+			sharedInstance.trDB = FMDatabase(path: deviceDBpath.path)
+			if (sharedInstance.trDB?.open())!
+			{
+				if sharedInstance.trDB!.executeUpdate(query, withArgumentsIn: nil)
+				{
+					return true
+				}
+			}
+		}
+		return false
 	}
 }
