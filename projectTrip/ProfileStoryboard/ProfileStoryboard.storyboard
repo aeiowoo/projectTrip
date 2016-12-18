@@ -1,18 +1,42 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="WXH-rE-qYm">
+            <objects>
+                <navigationController id="21c-1Y-MHw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hdx-DZ-Uhs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.43195810254593919" green="0.75087179460439513" blue="0.95857788705583757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="foG-KM-Lez">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="8we-hU-UmM" kind="relationship" relationship="rootViewController" id="VXg-iU-Zfr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADy-DN-vyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1556" y="-31"/>
+        </scene>
+        <!--여행 프로필-->
         <scene sceneID="VNw-UH-b3i">
             <objects>
-                <viewController storyboardIdentifier="ProfileStoryboard" id="8we-hU-UmM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileStoryboard" id="8we-hU-UmM" customClass="TripProfileInputViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xou-Vi-bVA"/>
                         <viewControllerLayoutGuide type="bottom" id="K2z-hS-lY7"/>
@@ -20,12 +44,83 @@
                     <view key="view" contentMode="scaleToFill" id="Oz4-95-EKf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="여행 제목" borderStyle="roundedRect" placeholder="여행 제목을 입력해주세요." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3v-WQ-EBe">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="v3v-WQ-EBe" secondAttribute="height" multiplier="343:30" id="cZ6-n7-xpm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="여행일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAY-7A-UYF">
+                                <rect key="frame" x="16" y="142" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LAY-7A-UYF" secondAttribute="height" multiplier="49:3" id="NPe-pZ-X3V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95857788705583757" green="0.95857788705583757" blue="0.95857788705583757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LAY-7A-UYF" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="1P4-Rb-BDr"/>
+                            <constraint firstItem="v3v-WQ-EBe" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="331-C7-CoT"/>
+                            <constraint firstItem="v3v-WQ-EBe" firstAttribute="top" secondItem="xou-Vi-bVA" secondAttribute="bottom" constant="16" id="L7H-BF-ru5"/>
+                            <constraint firstItem="v3v-WQ-EBe" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="M5b-8g-EHP"/>
+                            <constraint firstItem="v3v-WQ-EBe" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="aZy-xV-U6e"/>
+                            <constraint firstItem="LAY-7A-UYF" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="fgo-Ai-nT8"/>
+                            <constraint firstItem="v3v-WQ-EBe" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="fpM-eX-PUr"/>
+                            <constraint firstItem="v3v-WQ-EBe" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="iVR-xl-dYe"/>
+                            <constraint firstItem="v3v-WQ-EBe" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="mt8-fc-f6Y"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="여행 프로필" id="Smj-U1-bC8">
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="0yW-vz-q7S"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHP-Xq-glv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="80"/>
+            <point key="canvasLocation" x="-367.19999999999999" y="-31.03448275862069"/>
+        </scene>
+        <!--예산/화폐-->
+        <scene sceneID="NdZ-yn-Bjo">
+            <objects>
+                <viewController id="E7U-wG-WWz" customClass="TripBudgetInputViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="76S-ai-LIL"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Hy-XL-1e5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AJP-Py-ms2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="예산/화폐" id="6gP-dC-Vkd">
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="sei-Ub-teN"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VqM-Dm-fKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="-31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kpQ-7h-fNe">
+            <objects>
+                <navigationController id="Vwq-Vb-Ul6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P1B-Q1-12Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="E7U-wG-WWz" kind="relationship" relationship="rootViewController" id="l3X-Eo-Gdy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0z-Qr-bW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="-31"/>
         </scene>
     </scenes>
 </document>

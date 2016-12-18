@@ -6,11 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test Link View Controller-->
         <scene sceneID="GTo-7w-7Ck">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dAF-iz-aID" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="DetailInfoStoryboard" id="q0J-a0-9Ju" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailInfoStoryboard" id="q0J-a0-9Ju" customClass="TestLinkViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xQq-3X-IWQ"/>
                         <viewControllerLayoutGuide type="bottom" id="kcD-fI-rT3"/>
@@ -20,25 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kex-oB-3qD">
-                                <frame key="frameInset" minX="139" minY="168" width="98" height="54"/>
+                                <frame key="frameInset" minX="77" minY="168" width="223" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RegistContent"/>
+                                <state key="normal" title="TripDetailInputViewController"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqc-Ch-l63">
-                                <frame key="frameInset" minX="141" minY="263" width="93" height="57"/>
+                                <frame key="frameInset" minX="92" minY="263" width="192" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DetailInfo"/>
+                                <state key="normal" title="TripDetailInfoViewController"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezu-nR-FAt">
-                                <frame key="frameInset" minX="141" minY="373" width="93" height="53"/>
+                                <frame key="frameInset" minX="84" minY="373" width="208" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Report"/>
+                                <state key="normal" title="TripDetailGraphViewController"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="l1t-1G-1Yi"/>
+                    <connections>
+                        <outlet property="buttonDetailGraph" destination="ezu-nR-FAt" id="mXD-a7-Q8i"/>
+                        <outlet property="buttonDetailInfo" destination="dqc-Ch-l63" id="cn5-IC-Jf0"/>
+                        <outlet property="buttonDetailInput" destination="kex-oB-3qD" id="wA5-fN-r4z"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAF-iz-aID" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789.60000000000002" y="150.67466266866569"/>
         </scene>
