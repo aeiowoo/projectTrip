@@ -19,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		//DBManager.sharedInstance.getData()
 
-		DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
-		DBManager.setData(query: "UPDATE TRIP_MASTER SET TITLE = \'프랑스\' WHERE TR_ID = \'2\'")
-		DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
+		//DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
+		//DBManager.setData(query: "UPDATE TRIP_MASTER SET TITLE = \'프랑스\' WHERE TR_ID = \'2\'")
+		//DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
 		
-		TRDataManager.getTripMasterDatas()
+		//TRDataManager.getTripMasterDatas()
 		
 		
 		

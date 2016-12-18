@@ -48,9 +48,10 @@ class TRDataManager
 			                             budget: budget,
 			                             exchangeRate: rate,
 			                             currencyDailyUpdate: isDailyUpdate,
-			                             imgPath: oneRow[10],
-			                             createTime: oneRow[11],
-			                             updateTime: oneRow[12])
+			                             currencyUpdateTime: oneRow[10],
+			                             imgPath: oneRow[11],
+			                             createTime: oneRow[12],
+			                             updateTime: oneRow[13])
 			
 			dataArr.append(oneData)
 		}
@@ -97,10 +98,12 @@ class TRDataManager
 	{
 		for oneData in TRDataManager.sharedInstance.trDetailDatas
 		{
-			if id == oneData.id
-			{
-				return oneData
-			}
+			return nil
+			
+//			if id == oneData.id
+//			{
+//				return oneData
+//			}
 		}
 		return nil
 	}
@@ -121,7 +124,7 @@ class TRDataManager
 		let presentTime = Date().toString()
 		let cUpdateTime = cUpdate ? presentTime : ""
 		
-		let query = "INSERT INTO TRIP_MASTER VALUES('\(t)', '\(sDate)', '\(eDate)', '\(code)', '\(eCurrCode)', '\(sCurrCode)', '\(b)', '\(rate)', '\(cUpdate)', '\(cUpdateTime)', '\(path)', '\(presentTime)', '\(presentTime)')"
+		var query = "INSERT INTO TRIP_MASTER VALUES('\(t)', '\(sDate)', '\(eDate)', '\(code)', '\(eCurrCode)', '\(sCurrCode)', '\(b)', '\(rate)', '\(cUpdate)', '\(cUpdateTime)', '\(path)', '\(presentTime)', '\(presentTime)')"
 		guard DBManager.setData(query: query) else
 		{
 			return nil
@@ -208,10 +211,10 @@ class TRDataManager
 	
 	class func updateTripMasterData(data: TripMasterData) -> TripMasterData?
 	{
-		guard let newData = TRDataManager.sharedInstance.updateTripMasterDataToDB(data: data) else
-		{
-			
-		}
+//		guard let newData = TRDataManager.sharedInstance.updateTripMasterDataToDB(data: data) else
+//		{
+//			
+//		}
 		return nil
 	}
 	
