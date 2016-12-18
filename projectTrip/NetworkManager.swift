@@ -19,6 +19,9 @@ class NetworkManager {
     /** example
      * // 요청 보낼 url 정의
      * let urlPath: String = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%3D%22USDKRW%22&format=json&diagnostics=false&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"
+     * -> urlEncode 값
+     * 원문 ->
+     * select * from yahoo.finance.xchange where pair="USDKRW"&format=json&diagnostics=false&env=store://datatables.org/alltableswithkeys
      * // 응답값을 처리할 콜백함수 선언
      * let callback = {
      *   (response:NSDictionary?)->Void
