@@ -30,6 +30,10 @@
 		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
 		B6B4FA841DFCF30C00A83ABD /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */; };
 		B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */; };
+		B6C4E8731DFD15C5003F8667 /* TripListSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */; };
+		B6C4E8751DFD1D0A003F8667 /* TripTitleInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8741DFD1D0A003F8667 /* TripTitleInputViewController.swift */; };
+		B6C4E8771DFD2931003F8667 /* TripListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */; };
+		B6C4E8791DFD2B7C003F8667 /* TripGirdLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
 		B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
 		B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListSubMenuViewController.swift; sourceTree = "<group>"; };
+		B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListSubTableViewCell.swift; sourceTree = "<group>"; };
+		B6C4E8741DFD1D0A003F8667 /* TripTitleInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTitleInputViewController.swift; sourceTree = "<group>"; };
+		B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListCollectionViewCell.swift; sourceTree = "<group>"; };
+		B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripGirdLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				7C51E25D1DE9CBF80037DB1B /* Main.storyboard */,
+				B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */,
 				B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */,
+				B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */,
 				B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */,
+				B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */,
+				B6C4E8741DFD1D0A003F8667 /* TripTitleInputViewController.swift */,
 			);
 			name = MainStoryboard;
 			sourceTree = "<group>";
@@ -444,6 +456,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */,
+				B6C4E8751DFD1D0A003F8667 /* TripTitleInputViewController.swift in Sources */,
+				B6C4E8791DFD2B7C003F8667 /* TripGirdLayout.swift in Sources */,
 				7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */,
 				7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */,
 				B6B4FA841DFCF30C00A83ABD /* TripListViewController.swift in Sources */,
@@ -451,7 +465,9 @@
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */,
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
+				B6C4E8771DFD2931003F8667 /* TripListCollectionViewCell.swift in Sources */,
 				7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */,
+				B6C4E8731DFD15C5003F8667 /* TripListSubTableViewCell.swift in Sources */,
 				7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
