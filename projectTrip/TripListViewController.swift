@@ -34,6 +34,9 @@ class TripListViewController: UIViewController {
 
         collectionInt = userDefaults.integer(forKey: "collectionInt")
         print("\(collectionInt) 받아왔다")
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     func createViewContents() {
@@ -75,7 +78,7 @@ class TripListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+        print("prepare")
     }
 }
 
@@ -94,7 +97,7 @@ extension TripListViewController : UIViewControllerTransitioningDelegate {
     }
 }
 
-extension TripListViewController : UICollectionViewDataSource {
+extension TripListViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
