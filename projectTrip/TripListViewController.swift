@@ -25,8 +25,6 @@ class TripListViewController: UIViewController {
         super.viewDidLoad()
 
         createViewContents()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,11 +70,15 @@ class TripListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        print("prepare")
-//        
-//        let destinationViewController = segue.destination as? TripListSubMenuViewController
-//        
-//        interactionController.wireToViewController(viewController: destinationViewController)
+        print("prepare")
+        
+        if segue.identifier == "SubMenuSegue" {
+            
+            let destinationViewController = segue.destination as? TripListSubMenuViewController
+            destinationViewController?.transitioningDelegate = self
+            interactionController.wireToViewController(viewController: destinationViewController)
+        }
+        
     }
 }
 

@@ -143,7 +143,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Swo-tE-tzc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="onMenuButton:" destination="AFb-E1-Mvb" id="vnb-kV-KKO"/>
+                                <segue destination="J7z-hA-0F0" kind="presentation" identifier="SubMenuSegue" modalPresentationStyle="overCurrentContext" id="13V-eN-RrH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="haW-lK-AcL">
