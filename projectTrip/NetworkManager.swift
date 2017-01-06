@@ -49,7 +49,6 @@ class NetworkManager {
         })
         
         task.resume()
-        
     }
     
     // TODO : parameter dictionary to get request parameter format 변환 작업 필요

@@ -25,6 +25,8 @@ class TripListViewController: UIViewController {
         super.viewDidLoad()
 
         createViewContents()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,12 +85,26 @@ extension TripListViewController : UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         transition.isPresenting = true
+        
+        UIView.animate(withDuration: 1) {
+            
+            self.view.backgroundColor = UIColor.black
+            self.view.alpha = 0.6
+        }
+        
         return transition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         dismissTransition.isPresenting = false
+        
+        UIView.animate(withDuration: 0.7) {
+            
+            self.view.backgroundColor = UIColor.clear
+            self.view.alpha = 1
+        }
+        
         return dismissTransition
     }
     

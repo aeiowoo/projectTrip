@@ -46,6 +46,7 @@
 		B6C4E8791DFD2B7C003F8667 /* TripGirdLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */; };
 		B6ED4D8C1E19D6870081EEDA /* TripDismissModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ED4D8B1E19D6870081EEDA /* TripDismissModalAnimator.swift */; };
 		B6ED4D911E1A30620081EEDA /* TripSwipeInterationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ED4D901E1A30620081EEDA /* TripSwipeInterationController.swift */; };
+		B6ED4D951E1F724A0081EEDA /* TripCategorySettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ED4D941E1F724A0081EEDA /* TripCategorySettingViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripGirdLayout.swift; sourceTree = "<group>"; };
 		B6ED4D8B1E19D6870081EEDA /* TripDismissModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDismissModalAnimator.swift; sourceTree = "<group>"; };
 		B6ED4D901E1A30620081EEDA /* TripSwipeInterationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSwipeInterationController.swift; sourceTree = "<group>"; };
+		B6ED4D941E1F724A0081EEDA /* TripCategorySettingViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripCategorySettingViewCell.swift; path = ../TripCategorySettingViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +350,7 @@
 				B6ED4D8F1E1A30000081EEDA /* Transiitons */,
 				B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */,
 				B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */,
+				B6ED4D941E1F724A0081EEDA /* TripCategorySettingViewCell.swift */,
 				B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */,
 			);
 			name = SubClasses;
@@ -548,6 +551,7 @@
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
 				B6C4E8771DFD2931003F8667 /* TripListCollectionViewCell.swift in Sources */,
 				7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */,
+				B6ED4D951E1F724A0081EEDA /* TripCategorySettingViewCell.swift in Sources */,
 				B6C4E8731DFD15C5003F8667 /* TripListSubTableViewCell.swift in Sources */,
 				7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */,
 				7ADD91F61E0652660014D9DC /* TripBudgetInputViewController.swift in Sources */,
