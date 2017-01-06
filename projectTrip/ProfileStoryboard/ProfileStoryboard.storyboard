@@ -54,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="여행일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAY-7A-UYF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAY-7A-UYF">
                                 <rect key="frame" x="16" y="142" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LAY-7A-UYF" secondAttribute="height" multiplier="49:3" id="NPe-pZ-X3V"/>
@@ -63,18 +63,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시작" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqy-3v-H7j">
+                                <rect key="frame" x="16" y="171" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="끝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rte-hE-EnL">
+                                <rect key="frame" x="16" y="200" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.95857788705583757" green="0.95857788705583757" blue="0.95857788705583757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LAY-7A-UYF" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="1P4-Rb-BDr"/>
+                            <constraint firstItem="LAY-7A-UYF" firstAttribute="top" secondItem="v3v-WQ-EBe" secondAttribute="bottom" constant="32" id="24A-L5-HCV"/>
                             <constraint firstItem="v3v-WQ-EBe" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="331-C7-CoT"/>
                             <constraint firstItem="v3v-WQ-EBe" firstAttribute="top" secondItem="xou-Vi-bVA" secondAttribute="bottom" constant="16" id="L7H-BF-ru5"/>
                             <constraint firstItem="v3v-WQ-EBe" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="M5b-8g-EHP"/>
+                            <constraint firstItem="LAY-7A-UYF" firstAttribute="leading" secondItem="Zqy-3v-H7j" secondAttribute="leading" id="Mya-hi-vaQ"/>
+                            <constraint firstItem="Rte-hE-EnL" firstAttribute="top" secondItem="Zqy-3v-H7j" secondAttribute="bottom" constant="8" symbolic="YES" id="XdG-if-qzn"/>
                             <constraint firstItem="v3v-WQ-EBe" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="aZy-xV-U6e"/>
+                            <constraint firstItem="Zqy-3v-H7j" firstAttribute="top" secondItem="LAY-7A-UYF" secondAttribute="bottom" constant="8" symbolic="YES" id="fUC-3Q-LFD"/>
                             <constraint firstItem="LAY-7A-UYF" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="fgo-Ai-nT8"/>
                             <constraint firstItem="v3v-WQ-EBe" firstAttribute="trailing" secondItem="Oz4-95-EKf" secondAttribute="trailingMargin" id="fpM-eX-PUr"/>
                             <constraint firstItem="v3v-WQ-EBe" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="iVR-xl-dYe"/>
+                            <constraint firstItem="LAY-7A-UYF" firstAttribute="leading" secondItem="Rte-hE-EnL" secondAttribute="leading" id="m0v-9a-5iy"/>
                             <constraint firstItem="v3v-WQ-EBe" firstAttribute="leading" secondItem="Oz4-95-EKf" secondAttribute="leadingMargin" id="mt8-fc-f6Y"/>
+                            <constraint firstItem="Rte-hE-EnL" firstAttribute="trailing" secondItem="Zqy-3v-H7j" secondAttribute="trailing" id="zX9-3v-rDg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="여행 프로필" id="Smj-U1-bC8">
