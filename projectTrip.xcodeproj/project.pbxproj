@@ -31,7 +31,6 @@
 		8C13FCF91DFD153000D26D81 /* BackupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCF81DFD153000D26D81 /* BackupStoryboard.storyboard */; };
 		8C13FCFC1DFD155100D26D81 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */; };
 		8C13FE131E065A8700D26D81 /* TestLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */; };
-		8C13FE141E065A8700D26D81 /* TripDetailInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13FE111E065A8700D26D81 /* TripDetailInputViewController.swift */; };
 		8C13FE151E065A8700D26D81 /* TripDetailInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */; };
 		B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124A1E06290F0037A191 /* TripModalAnimator.swift */; };
 		B601124E1E0652380037A191 /* TripCategorySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124D1E0652370037A191 /* TripCategorySettingViewController.swift */; };
@@ -45,6 +44,8 @@
 		B6C4E8751DFD1D0A003F8667 /* TripTitleInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8741DFD1D0A003F8667 /* TripTitleInputViewController.swift */; };
 		B6C4E8771DFD2931003F8667 /* TripListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */; };
 		B6C4E8791DFD2B7C003F8667 /* TripGirdLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */; };
+		B6ED4D8C1E19D6870081EEDA /* TripDismissModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ED4D8B1E19D6870081EEDA /* TripDismissModalAnimator.swift */; };
+		B6ED4D911E1A30620081EEDA /* TripSwipeInterationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ED4D901E1A30620081EEDA /* TripSwipeInterationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		B6C4E8741DFD1D0A003F8667 /* TripTitleInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTitleInputViewController.swift; sourceTree = "<group>"; };
 		B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripGirdLayout.swift; sourceTree = "<group>"; };
+		B6ED4D8B1E19D6870081EEDA /* TripDismissModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDismissModalAnimator.swift; sourceTree = "<group>"; };
+		B6ED4D901E1A30620081EEDA /* TripSwipeInterationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSwipeInterationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,8 +345,8 @@
 		B601124C1E062FF00037A191 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
+				B6ED4D8F1E1A30000081EEDA /* Transiitons */,
 				B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */,
-				B601124A1E06290F0037A191 /* TripModalAnimator.swift */,
 				B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */,
 				B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */,
 			);
@@ -367,6 +370,16 @@
 				B6B0CBAA1E065ED9000AB9D8 /* TripCategoryColorListViewController.swift */,
 			);
 			name = CategoryView;
+			sourceTree = "<group>";
+		};
+		B6ED4D8F1E1A30000081EEDA /* Transiitons */ = {
+			isa = PBXGroup;
+			children = (
+				B601124A1E06290F0037A191 /* TripModalAnimator.swift */,
+				B6ED4D8B1E19D6870081EEDA /* TripDismissModalAnimator.swift */,
+				B6ED4D901E1A30620081EEDA /* TripSwipeInterationController.swift */,
+			);
+			name = Transiitons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,7 +538,9 @@
 				7A5EEFB91DFD475200C42DF9 /* NetworkManager.swift in Sources */,
 				B6B0CBA71E065EC8000AB9D8 /* TripCategoryInputViewController.swift in Sources */,
 				7CE6AD5A1DFC3721002E72A7 /* FMResultSet.m in Sources */,
+				B6ED4D8C1E19D6870081EEDA /* TripDismissModalAnimator.swift in Sources */,
 				B601124E1E0652380037A191 /* TripCategorySettingViewController.swift in Sources */,
+				B6ED4D911E1A30620081EEDA /* TripSwipeInterationController.swift in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */,
 				B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */,

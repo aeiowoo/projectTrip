@@ -13,6 +13,9 @@ class TripListViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     let transition = TripModalAnimator()
+    let dismissTransition = TripDismissModalAnimator()
+    let interactionController = TripSwipeInterationController()
+    
     var tripGirdLayout : TripGirdLayout!
     
     let userDefaults = UserDefaults.standard
@@ -55,14 +58,6 @@ class TripListViewController: UIViewController {
         collectionView.reloadData()
         
     }
-    
-    // + 버튼 눌렀을 때
-//    func onAddButton() {
-//        
-//        let titleInputController = self.storyboard?.instantiateViewController(withIdentifier: "TripTitleInputViewController") as! TripTitleInputViewController
-//        titleInputController.modalTransitionStyle = .crossDissolve
-//        present(titleInputController, animated: true, completion: nil)
-//    }
 
     //보류
     @IBAction func onMenuButton(_ sender: UIBarButtonItem) {
@@ -75,7 +70,11 @@ class TripListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        print("prepare")
+//        print("prepare")
+//        
+//        let destinationViewController = segue.destination as? TripListSubMenuViewController
+//        
+//        interactionController.wireToViewController(viewController: destinationViewController)
     }
 }
 
@@ -89,8 +88,13 @@ extension TripListViewController : UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        transition.isPresenting = false
-        return transition
+        dismissTransition.isPresenting = false
+        return dismissTransition
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        
+        return interactionController.interactionInProgress ? interactionController : nil
     }
 }
 

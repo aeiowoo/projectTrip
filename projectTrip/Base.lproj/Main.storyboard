@@ -303,7 +303,7 @@
                                                 <connections>
                                                     <outlet property="tripListSubImage" destination="0Q4-YR-hFv" id="I6l-1L-7gr"/>
                                                     <outlet property="tripListSubLabel" destination="JXc-u7-edE" id="eWs-A2-TmY"/>
-                                                    <segue destination="dgm-pW-pn9" kind="show" id="lfC-c4-69c"/>
+                                                    <segue destination="dgm-pW-pn9" kind="show" id="b0S-BP-NWP"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -311,8 +311,12 @@
                                             <outlet property="dataSource" destination="J7z-hA-0F0" id="4kH-WU-rS0"/>
                                         </connections>
                                     </tableView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-cn-dHo">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-cn-dHo">
                                         <rect key="frame" x="53" y="45" width="208" height="111"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="C3f-32-eep" appends="YES" id="0yw-QF-H7b"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -327,7 +331,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.30230629280821913" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="s8V-T2-KE0" firstAttribute="top" secondItem="PUY-5a-y3r" secondAttribute="top" id="3W0-EM-ung"/>
@@ -345,6 +349,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQJ-Yl-yMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="C3f-32-eep">
+                    <connections>
+                        <action selector="tap:" destination="J7z-hA-0F0" id="140-Bi-SZs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1949" y="-508"/>
         </scene>
@@ -393,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="voL-kt-Ask" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3301.5999999999999" y="-510.49475262368821"/>
+            <point key="canvasLocation" x="3444" y="-510"/>
         </scene>
         <!--카테고리 설정-->
         <scene sceneID="cde-je-IRi">
@@ -468,7 +477,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4F-qB-0i8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4153" y="-510"/>
+            <point key="canvasLocation" x="4201" y="-510"/>
         </scene>
         <!--Trip Category Icon List View Controller-->
         <scene sceneID="nzn-Zi-lVs">
@@ -580,7 +589,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58u-pE-179" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="-510"/>
+            <point key="canvasLocation" x="2705" y="-510"/>
         </scene>
     </scenes>
     <resources>
