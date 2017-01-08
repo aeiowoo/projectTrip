@@ -107,16 +107,24 @@
                                     <constraint firstAttribute="width" constant="40" id="IvP-RG-CS8"/>
                                 </constraints>
                                 <state key="normal" image="ImageCalendar"/>
+                                <connections>
+                                    <action selector="showTripDatePicker:" destination="8we-hU-UmM" eventType="touchUpInside" id="iTj-ku-FeS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKe-rh-3Wr">
                                 <rect key="frame" x="65" y="169" width="40" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="ImageCalendar"/>
+                                <connections>
+                                    <action selector="showTripDatePicker:" destination="8we-hU-UmM" eventType="touchUpInside" id="eI5-R7-Nfu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msz-61-S3l">
                                 <rect key="frame" x="104" y="169" width="255" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="showTripDatePicker:" destination="8we-hU-UmM" eventType="touchUpInside" id="fSM-LT-1G2"/>
                                 </connections>
@@ -124,7 +132,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O38-Kp-3au">
                                 <rect key="frame" x="104" y="211" width="255" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="showTripDatePicker:" destination="8we-hU-UmM" eventType="touchUpInside" id="RRR-zg-ExC"/>
                                 </connections>
@@ -235,7 +245,9 @@
                     <connections>
                         <outlet property="buttonCountry" destination="lnV-J3-T4Y" id="upQ-2p-AoN"/>
                         <outlet property="buttonEndDate" destination="O38-Kp-3au" id="miT-wg-bDy"/>
+                        <outlet property="buttonEndDateCalendar" destination="Cpn-r2-hJC" id="Obk-vZ-GcP"/>
                         <outlet property="buttonStartDate" destination="Msz-61-S3l" id="7UM-eu-MFN"/>
+                        <outlet property="buttonStartDateCalendar" destination="JKe-rh-3Wr" id="Aw7-KF-h61"/>
                         <outlet property="datePickerTripDate" destination="02N-0z-Jdz" id="Rhc-rq-T1B"/>
                         <outlet property="textFieldTitle" destination="v3v-WQ-EBe" id="PaV-F7-GqA"/>
                         <outlet property="viewTripDatePicker" destination="bfP-fd-QRy" id="3os-Xh-oTW"/>
