@@ -21,9 +21,39 @@ class TestLinkViewController: UIViewController {
     }
     
     func showDetailInputView(_ sender:UIButton)  {
+<<<<<<< HEAD
         /*let tripDetailInputViewController : TripDetailInputViewController
             = TripDetailInputViewController.init(nibName: "TripDetailInputViewController", bundle: nil)
         self.present(tripDetailInputViewController, animated: true, completion: nil)
         self.view.addSubview(tripDetailInputViewController.view)*/
+=======
+//        let tripDetailInputViewController : TripDetailInputViewController
+//            = TripDetailInputViewController.init(nibName: "TripDetailInputViewController", bundle: nil)
+//        self.present(tripDetailInputViewController, animated: true, completion: nil)
+//        self.view.addSubview(tripDetailInputViewController.view)
+>>>>>>> f31106b3f0df2ff654876d663b7b84f19560aeff
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
