@@ -31,7 +31,6 @@ class TripListSubMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
     
@@ -45,11 +44,11 @@ class TripListSubMenuViewController: UIViewController {
         
     }
 
-    @IBAction func dismissView(_ sender: UITapGestureRecognizer) {
+    @IBAction func tap(_ sender: UITapGestureRecognizer) {
         
-//        dismiss(animated: true, completion: nil)
+        print("swipe")
+        dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension TripListSubMenuViewController : UITableViewDataSource {

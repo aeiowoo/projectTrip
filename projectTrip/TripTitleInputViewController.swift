@@ -74,16 +74,24 @@ class TripTitleInputViewController: UIViewController {
         self.collectionInt = self.userdefault.integer(forKey: "collectionInt")
     }
 
-    //여행 추가하기 버튼
+//    여행 추가하기 버튼
     @IBAction func onAddButton(_ sender: UIButton) {
         
         self.collectionInt += 1
         self.userdefault.set(self.collectionInt, forKey: "collectionInt")
         self.userdefault.synchronize()
         
-        self.dismiss(animated: true, completion:nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func dismissButton(_ sender: UIButton) {
+        
+        self.collectionInt = 0
+        self.userdefault.set(self.collectionInt, forKey: "collectionInt")
+        self.userdefault.synchronize()
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 
