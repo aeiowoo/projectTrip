@@ -17,8 +17,8 @@ class TripMasterData
 	var imgPath: String = ""
 	
 	private(set) var id: Int = -1
-	private(set) var createTime: String = ""
-	private(set) var updateTime: String = ""
+	private(set) var createDate: String = ""
+	private(set) var updateDate: String = ""
 	
 	private var _startDate: Date?
 	var startDate: String
@@ -119,25 +119,11 @@ class TripMasterData
 	{
 		get
 		{
-			if _currencyDailyUpdate == "Y"
-			{
-				return true
-			}
-			else
-			{
-				return false
-			}
+			return _currencyDailyUpdate == "Y" ? true : false
 		}
 		set(newValue)
 		{
-			if newValue
-			{
-				_currencyDailyUpdate = "Y"
-			}
-			else
-			{
-				_currencyDailyUpdate = "N"
-			}
+			_currencyDailyUpdate = newValue ? "Y" : "N"
 		}
 	}
 	
@@ -170,12 +156,12 @@ class TripMasterData
 	     currencyDailyUpdate cUpdate: Bool,
 	     currencyUpdateTime cUpdateTime: String,
 	     imgPath path: String,
-	     createTime cTime: String,
-	     updateTime uTime: String)
+	     createDate cDate: String,
+	     updateDate uDate: String)
 	{
 		customInit(id: i, title: t, startDate: sDate, endDate: eDate, countryCode: code, expCurrencyCode: eCurrCode,
 		           stdCurrencyCode: sCurrCode, budget: b, exchangeRate: rate, currencyDailyUpdate: cUpdate,
-		           currencyUpdateTime: cUpdateTime, imgPath: path, createTime: cTime, updateTime: uTime)
+		           currencyUpdateTime: cUpdateTime, imgPath: path, createDate: cDate, updateDate: uDate)
 	}
 	
 	private func customInit(id i: Int,
@@ -190,8 +176,8 @@ class TripMasterData
 	                        currencyDailyUpdate cUpdate: Bool,
 	                        currencyUpdateTime cUpdateTime: String,
 	                        imgPath path: String,
-	                        createTime cTime: String,
-	                        updateTime uTime: String)
+	                        createDate cDate: String,
+	                        updateDate uDate: String)
 	{
 		id = i
 		title = t
@@ -205,8 +191,8 @@ class TripMasterData
 		currencyDailyUpdate = cUpdate
 		currencyUpdateTime = cUpdateTime
 		imgPath = path
-		createTime = cTime
-		updateTime = uTime
+		createDate = cDate
+		updateDate = uDate
 	}
 }
 

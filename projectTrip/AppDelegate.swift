@@ -25,8 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		//TRDataManager.getTripMasterDatas()
 		
-		
-		
 		return true
 	}
 
