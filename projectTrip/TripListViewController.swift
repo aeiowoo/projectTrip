@@ -56,7 +56,6 @@ class TripListViewController: UIViewController {
         tripGirdLayout = TripGirdLayout(numberOfColumns: 2)
         collectionView.collectionViewLayout = tripGirdLayout
         collectionView.reloadData()
-        
     }
 
     //보류
