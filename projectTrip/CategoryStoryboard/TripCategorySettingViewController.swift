@@ -10,8 +10,7 @@ import UIKit
 
 class TripCategorySettingViewController: UIViewController {
     
-    
-    @IBOutlet var tripCategorySettingTableView: UITableView!
+    @IBOutlet var TripCategorySettingTableView: UITableView!
     
     let datas = TripCategorySettingDatas.getDatas()
     
@@ -50,15 +49,12 @@ class TripCategorySettingViewController: UIViewController {
         //네비게이션 바 색 설정
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 71/255, green: 173/255, blue: 247/255, alpha: 1)
         
-        
     }
     
     @IBAction func dismiss(_ sender: UIButton) {
         
         self.dismiss(animated: true, completion: nil)
     }
-
-
 }
 
 extension TripCategorySettingViewController : UITableViewDataSource {
@@ -77,8 +73,8 @@ extension TripCategorySettingViewController : UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TripCategorySettingViewCell") as! TripCategorySettingViewCell
         
-//        cell.categoryImage.image = UIImage.init(named: datas[indexPath.row].image)
-//        cell.categoryLabel.text = datas[indexPath.row].label
+//        cell.tripListSubImage.image = UIImage.init(named: datas[indexPath.row].image)
+//        cell.tripListSubLabel.text = datas[indexPath.row].label
         
         return cell
     }

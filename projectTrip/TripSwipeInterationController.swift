@@ -51,7 +51,7 @@ class TripSwipeInterationController: UIPercentDrivenInteractiveTransition {
             // 3
             shouldCompleteTransition = progress > 0.5
             
-            gestureRecognizer.view?.alpha = 1 - progress
+            
             
             print(progress)
 //            print("start")
