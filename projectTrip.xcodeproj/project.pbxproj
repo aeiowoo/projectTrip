@@ -33,6 +33,7 @@
 		8C13FE131E065A8700D26D81 /* TestLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */; };
 		8C13FE141E065A8700D26D81 /* TripDetailInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13FE111E065A8700D26D81 /* TripDetailInputViewController.swift */; };
 		8C13FE151E065A8700D26D81 /* TripDetailInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */; };
+		8CB601911E2B25DB000C4026 /* TripDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB601901E2B25DB000C4026 /* TripDetailItem.swift */; };
 		B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124A1E06290F0037A191 /* TripModalAnimator.swift */; };
 		B601124E1E0652380037A191 /* TripCategorySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124D1E0652370037A191 /* TripCategorySettingViewController.swift */; };
 		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
@@ -101,6 +102,7 @@
 		8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLinkViewController.swift; sourceTree = "<group>"; };
 		8C13FE111E065A8700D26D81 /* TripDetailInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailInputViewController.swift; sourceTree = "<group>"; };
 		8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripDetailInputViewController.xib; sourceTree = "<group>"; };
+		8CB601901E2B25DB000C4026 /* TripDetailItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailItem.swift; sourceTree = SOURCE_ROOT; };
 		B601124A1E06290F0037A191 /* TripModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModalAnimator.swift; sourceTree = "<group>"; };
 		B601124D1E0652370037A191 /* TripCategorySettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripCategorySettingViewController.swift; path = CategoryStoryboard/TripCategorySettingViewController.swift; sourceTree = "<group>"; };
 		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			children = (
 				8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */,
 				8C13FE111E065A8700D26D81 /* TripDetailInputViewController.swift */,
+				8CB601901E2B25DB000C4026 /* TripDetailItem.swift */,
 				8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */,
 				8C13FCEC1DFD145F00D26D81 /* DetailInfoStoryboard.storyboard */,
 			);
@@ -518,6 +521,7 @@
 				B601124E1E0652380037A191 /* TripCategorySettingViewController.swift in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */,
+				8CB601911E2B25DB000C4026 /* TripDetailItem.swift in Sources */,
 				B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */,
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
 				B6C4E8771DFD2931003F8667 /* TripListCollectionViewCell.swift in Sources */,

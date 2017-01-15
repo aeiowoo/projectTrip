@@ -16,6 +16,7 @@ class TripDetailInputViewController: UIViewController {
     @IBOutlet weak var labelCurrency: UILabel!
     @IBOutlet weak var labelCost: UILabel!
     @IBOutlet weak var labelSum: UILabel!
+    @IBOutlet weak var labelOperation: UILabel!
     
     @IBOutlet weak var buttonCash: UIButton!
     @IBOutlet weak var buttonCard: UIButton!
@@ -66,17 +67,69 @@ class TripDetailInputViewController: UIViewController {
     var firstButtonLocationX: CGFloat
     var firstButtonLocationY: CGFloat
     
+    var currentOperator: String
+    var currentOperand:String
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
+    @IBAction func button1Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 1)
+    }
+    @IBAction func button2Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 2)
+    }
+    @IBAction func button3Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 3)
+    }
+    @IBAction func buttonDivClicked(_ sender: AnyObject) {
+        self.operatorSelected(selectedOperator: "/")
+    }
+    @IBAction func button4Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 4)
+    }
+    @IBAction func button5Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 5)
+    }
+    @IBAction func button6Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 6)
+    }
+    @IBAction func buttonMulClicked(_ sender: AnyObject) {
+        self.operatorSelected(selectedOperator: "x")
+    }
+    @IBAction func button7Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 7)
+    }
+    @IBAction func button8Clicked(_ sender: AnyObject) {
+    self.updateCostLabel(selectedNum: 8)
+    }
+    @IBAction func button9Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 9)
+    }
+    @IBAction func buttonPlusClicked(_ sender: AnyObject) {
+        self.operatorSelected(selectedOperator: "+")
+    }
+    @IBAction func buttonDotClicked(_ sender: AnyObject) {
+    }
+    @IBAction func button0Clicked(_ sender: AnyObject) {
+        self.updateCostLabel(selectedNum: 0)
+    }
+    @IBAction func buttonDelClicked(_ sender: AnyObject) {
+//        self.operatorSelected(selectedOperator: "+")
+    }
+    @IBAction func buttonMinusClicked(_ sender: AnyObject) {
+        self.operatorSelected(selectedOperator: "-")
+    }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         
         buttonWidth = (UIScreen.main.bounds.width - 6.0)/4
         firstButtonLocationX = CGFloat.init()
         firstButtonLocationY = CGFloat.init()
         buttonHeight = CGFloat.init()
+        currentOperator = ""
+        currentOperand = ""
         
         super.init(nibName: nibNameOrNil, bundle: Bundle.main )
 
@@ -96,12 +149,12 @@ class TripDetailInputViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-  
-    
+
     func initialize()
     {
         labelCurrency.text = "USD $"
         labelCost.text = "0"
+        labelOperation.text = ""
         labelSum.text = labelCurrency.text! + labelCost.text!
         
         buttonCancel.setTitle("취소", for: UIControlState.normal)
@@ -124,11 +177,15 @@ class TripDetailInputViewController: UIViewController {
     func selectCash(_ sender:UIButton)
     {
         print("ButtonCash touched")
+        buttonCash.alpha = 1.0
+        buttonCard.alpha = 0.2
     }
     
     func selectCard(_ sender:UIButton)
     {
         print("ButtonCard touched")
+        buttonCash.alpha = 0.2
+        buttonCard.alpha = 1.0
     }
     
     func selectFood(_ sender:UIButton)
@@ -214,7 +271,7 @@ class TripDetailInputViewController: UIViewController {
         {
             let button : UIButton = buttonArray.object(at: i-1) as! UIButton
        
-            button.frame(forAlignmentRect: CGRect.init(x: buttonLocationX , y: buttonLocationY, width: buttonWidth, height: buttonHeight))
+//            button.frame(forAlignmentRect: CGRect.init(x: buttonLocationX , y: buttonLocationY, width: buttonWidth, height: buttonHeight))
             button.layer.borderWidth = 0.3
             button.layer.borderColor = imageViewBottom.backgroundColor?.cgColor
 
@@ -226,5 +283,69 @@ class TripDetailInputViewController: UIViewController {
             
         }
     }
+    
+    func updateCostLabel(selectedNum : Int) {
+        let selectedNumString = String(selectedNum)
+        if(currentOperator == "")
+        {
+            if( labelCost.text == "0")
+            {
+                labelCost.text = selectedNumString
+            }
+            else
+            {
+                labelCost.text = labelCost.text! + selectedNumString
+            }
+        }
+        else
+        {
+            if(labelOperation.isHidden)
+            {
+                labelOperation.isHidden = false
+                //TODO : setFrame
+            }
+            
+            labelOperation.text = labelOperation.text! + selectedNumString
+            currentOperand = currentOperand + String(selectedNum)
+            let operand1 : Int = Int(labelCost.text!)!
+            let operand2 : Int = Int(currentOperand)!
+            if(currentOperator == "+")
+            {
+                labelCost.text = String(operand1 + operand2)
+            }
+            else if(currentOperator == "-")
+            {
+                labelCost.text = String(operand1 - operand2)
+            }
+            else if(currentOperator == "x")
+            {
+              labelCost.text = String(operand1 * operand2)
+            }
+            else if(currentOperator == "/")
+            {
+                 labelCost.text = String(operand1 / operand2)
+            }
+        }
+        //int to String >> let x: Int? = myString.toInt()
+    }
 
+    func operatorSelected(selectedOperator : String) {
+        currentOperator = selectedOperator;
+        if(labelOperation.text == "")
+        {
+        labelOperation.text = labelCost.text! + selectedOperator
+        }
+        else{
+        labelOperation.text = labelOperation.text! + selectedOperator     
+        }
+       
+        if(labelOperation.isHidden)
+        {
+            labelOperation.isHidden = false
+            //TODO : setFrame
+        }
+//        
+//        labelOperation.text = labelOperation.text! + selectedOperator
+
+    }
 }
