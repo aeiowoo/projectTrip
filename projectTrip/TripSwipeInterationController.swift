@@ -37,7 +37,7 @@ class TripSwipeInterationController: UIPercentDrivenInteractiveTransition {
         
 //        var progress = (translation.x / 200)
 //        progress = CGFloat(fminf(fmaxf(Float(progress), 0.0), 1.0))
-        var progress = -(gestureRecognizer.translation(in: gestureRecognizer.view!).x / (gestureRecognizer.view!.bounds.size.width))
+        var progress = -(gestureRecognizer.translation(in: gestureRecognizer.view!).x / (gestureRecognizer.view!.bounds.size.width*3))
         progress = min(1.0, max(0.0, progress))
         
         switch gestureRecognizer.state {
@@ -49,9 +49,7 @@ class TripSwipeInterationController: UIPercentDrivenInteractiveTransition {
             
         case .changed:
             // 3
-            shouldCompleteTransition = progress > 0.5
-            
-            
+            shouldCompleteTransition = progress > 0.1
             
             print(progress)
 //            print("start")
@@ -69,7 +67,9 @@ class TripSwipeInterationController: UIPercentDrivenInteractiveTransition {
             if !shouldCompleteTransition {
                 cancel()
             } else {
+                
                 finish()
+                
             }
             
         default:

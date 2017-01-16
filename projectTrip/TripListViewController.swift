@@ -76,6 +76,7 @@ class TripListViewController: UIViewController {
             let destinationViewController = segue.destination as? TripListSubMenuViewController
             destinationViewController?.transitioningDelegate = self
             interactionController.wireToViewController(viewController: destinationViewController)
+            
         }
         
     }
@@ -110,6 +111,8 @@ extension TripListViewController : UIViewControllerTransitioningDelegate {
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        
+        print("처리하자")
         
         return interactionController.interactionInProgress ? interactionController : nil
     }

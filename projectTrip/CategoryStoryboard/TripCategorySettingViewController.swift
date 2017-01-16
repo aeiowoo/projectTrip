@@ -71,10 +71,10 @@ extension TripCategorySettingViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCategorySettingViewCell") as! TripCategorySettingViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCategorySettingViewCell") as!TripCategorySettingViewCell
         
-//        cell.tripListSubImage.image = UIImage.init(named: datas[indexPath.row].image)
-//        cell.tripListSubLabel.text = datas[indexPath.row].label
+        cell.categoryImage.image = UIImage(named: datas[indexPath.row].image)
+        cell.categoryLabel.text = datas[indexPath.row].label
         
         return cell
     }

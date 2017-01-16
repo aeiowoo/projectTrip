@@ -10,7 +10,8 @@ import UIKit
 
 class TripCategorySettingViewCell: UITableViewCell {
     
-    
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var categoryImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
