@@ -22,6 +22,13 @@ enum UsedCode: String
 	static let allValues = [Dining, Shopping, SightSeeing, Transportation, Stay, Etc]
 }
 
+enum MoneySign: String
+{
+	case Income = "+", Expense = ""
+	
+	static let allValues = [Income, Expense]
+}
+
 class TripDetailData
 {
 	private(set) var id: Int = -1
@@ -71,16 +78,16 @@ class TripDetailData
 		}
 	}
 	
-	private var _usedMoneySign: String = ""
-	var usedMoneyIsPositive: Bool
+	private var _usedMoneySign: MoneySign = .Expense
+	var usedMoneyIsExpense: MoneySign
 	{
 		get
 		{
-			return _usedMoneySign == "+" ? true : false
+			return _usedMoneySign
 		}
 		set(newValue)
 		{
-			_usedMoneySign = newValue ? "+" : ""
+			_usedMoneySign = newValue
 		}
 	}
 	
@@ -90,11 +97,12 @@ class TripDetailData
 	     usedCode code: UsedCode,
 	     usedDate date: String,
 	     usedMoney money: Float,
+	     usedMoneySign moneySign: MoneySign,
 	     title t: String,
 	     desc d: String,
 	     imgPath path: String)
 	{
-		customInit(id: dId, masterId: mId, moneyType: type, usedCode: code, usedDate: date, usedMoney: money, title: t, desc: d, imgPath: path)
+		customInit(id: dId, masterId: mId, moneyType: type, usedCode: code, usedDate: date, usedMoney: money, usedMoneySign: moneySign, title: t, desc: d, imgPath: path)
 	}
 	
 	private func customInit(id dId: Int,
@@ -103,6 +111,7 @@ class TripDetailData
 	                        usedCode code: UsedCode,
 	                        usedDate date: String,
 	                        usedMoney money: Float,
+	                        usedMoneySign moneySign: MoneySign,
 	                        title t: String,
 	                        desc d: String,
 	                        imgPath path: String)
@@ -113,6 +122,7 @@ class TripDetailData
 		usedCode = code
 		usedDate = date
 		usedMoney = money
+		usedMoneyIsExpense = moneySign
 		title = t
 		desc = d
 		imgPath = path

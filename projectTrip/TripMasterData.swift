@@ -33,16 +33,7 @@ class TripMasterData
 		}
 		set(newValue)
 		{
-			let sDate = newValue.toDate()
-			if let eDate = _endDate, sDate <= eDate
-			{
-				_startDate = sDate
-			}
-			else
-			{
-				_startDate = nil
-				assertionFailure("[TripMasterData] 여행 기간 설정 오류, Id: \(id), StartDate: (\(sDate)), EndDate: (\(_endDate))")
-			}
+			_startDate = newValue.toDate()
 		}
 	}
 	
@@ -59,16 +50,7 @@ class TripMasterData
 		}
 		set(newValue)
 		{
-			let eDate = newValue.toDate()
-			if let sDate = _startDate, sDate <= eDate
-			{
-				_endDate = eDate
-			}
-			else
-			{
-				_endDate = nil
-				assertionFailure("[TripMasterData] 여행 기간 설정 오류, Id: \(id), StartDate: (\(_startDate)), EndDate: (\(eDate))")
-			}
+			_endDate = newValue.toDate()
 		}
 	}
 	
@@ -119,11 +101,11 @@ class TripMasterData
 	{
 		get
 		{
-			return _currencyDailyUpdate == "Y" ? true : false
+			return _currencyDailyUpdate.toBool()
 		}
 		set(newValue)
 		{
-			_currencyDailyUpdate = newValue ? "Y" : "N"
+			_currencyDailyUpdate = newValue.toString()
 		}
 	}
 	
@@ -140,7 +122,7 @@ class TripMasterData
 		}
 		set(newValue)
 		{
-			_currencyUpdateTime = newValue.toDate()
+			_currencyUpdateTime = newValue == "" ? nil : newValue.toDate()
 		}
 	}
 	
