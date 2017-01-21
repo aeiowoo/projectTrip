@@ -49,6 +49,15 @@ class TripListSubMenuViewController: UIViewController {
         print("swipe")
         dismiss(animated: true, completion: nil)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let indexPath = tripListSubMenuTabelView.indexPathForSelectedRow {
+            
+            print(indexPath)
+        }
+        
+    }
 }
 
 extension TripListSubMenuViewController : UITableViewDataSource {

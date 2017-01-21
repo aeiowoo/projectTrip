@@ -73,7 +73,7 @@ class TripTitleInputViewController: UIViewController {
         
         self.collectionInt = self.userdefault.integer(forKey: "collectionInt")
     }
-
+    
 //    여행 추가하기 버튼
     @IBAction func onAddButton(_ sender: UIButton) {
         

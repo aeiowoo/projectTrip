@@ -38,12 +38,15 @@
 		8C13FCFC1DFD155100D26D81 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */; };
 		8C13FE131E065A8700D26D81 /* TestLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */; };
 		8C13FE151E065A8700D26D81 /* TripDetailInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */; };
+		8CB601911E2B25DB000C4026 /* TripDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB601901E2B25DB000C4026 /* TripDetailItem.swift */; };
 		B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124A1E06290F0037A191 /* TripModalAnimator.swift */; };
 		B601124E1E0652380037A191 /* TripCategorySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124D1E0652370037A191 /* TripCategorySettingViewController.swift */; };
+		B63C5AF61E2B295200E462A3 /* TripCategorySettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63C5AF51E2B295200E462A3 /* TripCategorySettingViewCell.swift */; };
 		B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6493FD71DF70F3B00121528 /* AppDatas.swift */; };
 		B6B0CBA71E065EC8000AB9D8 /* TripCategoryInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0CBA61E065EC8000AB9D8 /* TripCategoryInputViewController.swift */; };
 		B6B0CBA91E065ED2000AB9D8 /* TripCategoryIconListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0CBA81E065ED2000AB9D8 /* TripCategoryIconListViewController.swift */; };
 		B6B0CBAB1E065ED9000AB9D8 /* TripCategoryColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0CBAA1E065ED9000AB9D8 /* TripCategoryColorListViewController.swift */; };
+		B6B44AC21E2B349100FCAD12 /* TripTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B44AC11E2B349100FCAD12 /* TripTestViewController.swift */; };
 		B6B4FA841DFCF30C00A83ABD /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */; };
 		B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */; };
 		B6C4E8731DFD15C5003F8667 /* TripListSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */; };
@@ -117,12 +120,15 @@
 		8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLinkViewController.swift; sourceTree = "<group>"; };
 		8C13FE111E065A8700D26D81 /* TripDetailInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailInputViewController.swift; sourceTree = "<group>"; };
 		8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripDetailInputViewController.xib; sourceTree = "<group>"; };
+		8CB601901E2B25DB000C4026 /* TripDetailItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailItem.swift; sourceTree = SOURCE_ROOT; };
 		B601124A1E06290F0037A191 /* TripModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripModalAnimator.swift; sourceTree = "<group>"; };
 		B601124D1E0652370037A191 /* TripCategorySettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripCategorySettingViewController.swift; path = CategoryStoryboard/TripCategorySettingViewController.swift; sourceTree = "<group>"; };
+		B63C5AF51E2B295200E462A3 /* TripCategorySettingViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCategorySettingViewCell.swift; sourceTree = "<group>"; };
 		B6493FD71DF70F3B00121528 /* AppDatas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDatas.swift; sourceTree = "<group>"; };
 		B6B0CBA61E065EC8000AB9D8 /* TripCategoryInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCategoryInputViewController.swift; sourceTree = "<group>"; };
 		B6B0CBA81E065ED2000AB9D8 /* TripCategoryIconListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCategoryIconListViewController.swift; sourceTree = "<group>"; };
 		B6B0CBAA1E065ED9000AB9D8 /* TripCategoryColorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCategoryColorListViewController.swift; sourceTree = "<group>"; };
+		B6B44AC11E2B349100FCAD12 /* TripTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTestViewController.swift; sourceTree = "<group>"; };
 		B6B4FA831DFCF30C00A83ABD /* TripListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
 		B6B4FA851DFCF31400A83ABD /* TripListSubMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListSubMenuViewController.swift; sourceTree = "<group>"; };
 		B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListSubTableViewCell.swift; sourceTree = "<group>"; };
@@ -320,6 +326,7 @@
 			children = (
 				8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */,
 				8C13FE111E065A8700D26D81 /* TripDetailInputViewController.swift */,
+				8CB601901E2B25DB000C4026 /* TripDetailItem.swift */,
 				8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */,
 				8C13FCEC1DFD145F00D26D81 /* DetailInfoStoryboard.storyboard */,
 			);
@@ -374,6 +381,7 @@
 				B6ED4D8F1E1A30000081EEDA /* Transiitons */,
 				B6C4E8781DFD2B7C003F8667 /* TripGirdLayout.swift */,
 				B6C4E8721DFD15C5003F8667 /* TripListSubTableViewCell.swift */,
+				B63C5AF51E2B295200E462A3 /* TripCategorySettingViewCell.swift */,
 				B6C4E8761DFD2931003F8667 /* TripListCollectionViewCell.swift */,
 			);
 			name = SubClasses;
@@ -391,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				B601124D1E0652370037A191 /* TripCategorySettingViewController.swift */,
+				B6B44AC11E2B349100FCAD12 /* TripTestViewController.swift */,
 				B6B0CBA61E065EC8000AB9D8 /* TripCategoryInputViewController.swift */,
 				B6B0CBA81E065ED2000AB9D8 /* TripCategoryIconListViewController.swift */,
 				B6B0CBAA1E065ED9000AB9D8 /* TripCategoryColorListViewController.swift */,
@@ -573,7 +582,9 @@
 				B6ED4D911E1A30620081EEDA /* TripSwipeInterationController.swift in Sources */,
 				7C51E25A1DE9CBF70037DB1B /* AppDelegate.swift in Sources */,
 				B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */,
+				8CB601911E2B25DB000C4026 /* TripDetailItem.swift in Sources */,
 				B6B4FA861DFCF31400A83ABD /* TripListSubMenuViewController.swift in Sources */,
+				B63C5AF61E2B295200E462A3 /* TripCategorySettingViewCell.swift in Sources */,
 				7C9F44581E0647CD00608ADE /* TRDataManager.swift in Sources */,
 				B6B0CBAB1E065ED9000AB9D8 /* TripCategoryColorListViewController.swift in Sources */,
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
@@ -582,6 +593,7 @@
 				7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */,
 				B6C4E8731DFD15C5003F8667 /* TripListSubTableViewCell.swift in Sources */,
 				7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */,
+				B6B44AC21E2B349100FCAD12 /* TripTestViewController.swift in Sources */,
 				7ADD91F61E0652660014D9DC /* TripBudgetInputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
