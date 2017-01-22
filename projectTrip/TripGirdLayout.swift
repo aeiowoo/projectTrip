@@ -10,6 +10,7 @@ import UIKit
 
 class TripGirdLayout: UICollectionViewFlowLayout {
 
+    
     var numberOfColumns : Int = 2
     let userDefaults = UserDefaults.standard
     

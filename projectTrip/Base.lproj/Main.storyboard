@@ -115,14 +115,52 @@
                                                         <segue destination="wmg-4B-vLd" kind="show" id="wWZ-Qb-0qa"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행제목" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uea-Gg-IZo">
+                                                    <rect key="frame" x="8" y="58" width="169" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="pXC-vQ-WMm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017. 01. 01 ~ 2017. 01. 01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYF-ZH-8O3">
+                                                    <rect key="frame" x="8" y="83" width="169" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0i8-U8-eMc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqi-l5-EDR">
+                                                    <rect key="frame" x="8" y="156" width="169" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="rYF-ZH-8O3" firstAttribute="trailing" secondItem="Uea-Gg-IZo" secondAttribute="trailing" id="AWT-k3-pJX"/>
+                                            <constraint firstItem="Cqi-l5-EDR" firstAttribute="leading" secondItem="qdi-nq-J2J" secondAttribute="leadingMargin" id="FRj-LQ-x3P"/>
+                                            <constraint firstItem="Cqi-l5-EDR" firstAttribute="trailing" secondItem="rYF-ZH-8O3" secondAttribute="trailing" id="Lds-08-XYr"/>
+                                            <constraint firstItem="Cqi-l5-EDR" firstAttribute="leading" secondItem="rYF-ZH-8O3" secondAttribute="leading" id="Neg-6z-XQF"/>
                                             <constraint firstAttribute="bottom" secondItem="Dbw-Q2-5nq" secondAttribute="bottom" id="RxY-rj-xgr"/>
+                                            <constraint firstItem="rYF-ZH-8O3" firstAttribute="leading" secondItem="Uea-Gg-IZo" secondAttribute="leading" id="YUI-Ev-TRh"/>
+                                            <constraint firstItem="Cqi-l5-EDR" firstAttribute="top" secondItem="rYF-ZH-8O3" secondAttribute="bottom" constant="52" id="cXg-Zl-1SO"/>
                                             <constraint firstItem="Dbw-Q2-5nq" firstAttribute="leading" secondItem="qdi-nq-J2J" secondAttribute="leading" id="hEU-3t-qys"/>
+                                            <constraint firstItem="rYF-ZH-8O3" firstAttribute="top" secondItem="Uea-Gg-IZo" secondAttribute="bottom" constant="4" id="mhn-Ew-8ao"/>
                                             <constraint firstItem="Dbw-Q2-5nq" firstAttribute="top" secondItem="qdi-nq-J2J" secondAttribute="top" id="q4X-Ye-Zh3"/>
+                                            <constraint firstItem="Uea-Gg-IZo" firstAttribute="top" secondItem="qdi-nq-J2J" secondAttribute="topMargin" constant="50" id="qeR-jt-4h5"/>
                                             <constraint firstAttribute="trailing" secondItem="Dbw-Q2-5nq" secondAttribute="trailing" id="xTl-HY-eEx"/>
+                                            <constraint firstItem="Cqi-l5-EDR" firstAttribute="centerX" secondItem="Dbw-Q2-5nq" secondAttribute="centerX" id="zOz-zE-Bvu"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="tripBudget" destination="Cqi-l5-EDR" id="Dh1-yu-Koc"/>
+                                            <outlet property="tripDate" destination="rYF-ZH-8O3" id="xbP-Bs-ETF"/>
+                                            <outlet property="tripLabel" destination="Uea-Gg-IZo" id="hHW-5a-ZDD"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -159,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojg-gC-Feq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="-225"/>
+            <point key="canvasLocation" x="1168.8" y="-225.33733133433284"/>
         </scene>
         <!--Trip Title Input View Controller-->
         <scene sceneID="uE4-Il-4wc">

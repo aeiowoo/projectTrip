@@ -10,4 +10,13 @@ import UIKit
 
 class TripListCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var tripLabel: UILabel!
+    @IBOutlet var tripDate: UILabel!
+    @IBOutlet var tripBudget: UILabel!
+    
+    
+    
+    
+    
+    
 }

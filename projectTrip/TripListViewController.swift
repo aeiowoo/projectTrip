@@ -10,6 +10,8 @@ import UIKit
 
 class TripListViewController: UIViewController {
     
+    let dbManager =  TRDataManager.getTripMasterDatas()
+    
     @IBOutlet var collectionView: UICollectionView!
     
     let transition = TripModalAnimator()
@@ -69,7 +71,7 @@ class TripListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        print("prepare")
+        print("prepared")
         
         if segue.identifier == "SubMenuSegue" {
             
@@ -128,6 +130,11 @@ extension TripListViewController : UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TripListCell", for: indexPath) as! TripListCollectionViewCell
+        
+        
+        
+        cell.tripLabel.text = ""
+        
         
         return cell
     }
