@@ -13,15 +13,75 @@ class TRDataManager
 	//싱글톤 매니저 변수
 	static private let sharedInstance: TRDataManager = TRDataManager()
 	
-	private(set) var trMasterDatas: Array<TripMasterData> = Array<TripMasterData>()
-	private(set) var trDetailDatas: Array<TripDetailData> = Array<TripDetailData>()
-	private(set) var countryDatas: Array<CountryData> = Array<CountryData>()
+	private var trMasterDatas: Array<TripMasterData> = Array<TripMasterData>()
+	private var trDetailDatas: Array<TripDetailData> = Array<TripDetailData>()
+	private var countryDatas: Array<CountryData> = Array<CountryData>()
 	
+	//MARK: Synchronize data with DB
+	private func synchronizeTripMasterDatasWithDB() -> Array<TripMasterData>
+	{
+		guard let dataArr = TRDataManager.sharedInstance.getTripMasterDatasFromDB() else
+		{
+			TRDataManager.sharedInstance.trMasterDatas.removeAll()
+			return TRDataManager.sharedInstance.trMasterDatas
+		}
+		
+		TRDataManager.sharedInstance.trMasterDatas = dataArr
+		return TRDataManager.sharedInstance.trMasterDatas
+	}
+	
+	private func synchronizeTripDetailDatasWithDB() -> Array<TripDetailData>
+	{
+		guard let dataArr = TRDataManager.sharedInstance.getTripDetailDatasFromDB() else
+		{
+			TRDataManager.sharedInstance.trDetailDatas.removeAll()
+			return TRDataManager.sharedInstance.trDetailDatas
+		}
+		
+		TRDataManager.sharedInstance.trDetailDatas = dataArr
+		return TRDataManager.sharedInstance.trDetailDatas
+	}
+	
+	private func synchronizeCountryDatasWithDB() -> Array<CountryData>
+	{
+		guard let dataArr = TRDataManager.sharedInstance.getCountryDatasFromDB() else
+		{
+			TRDataManager.sharedInstance.countryDatas.removeAll()
+			return TRDataManager.sharedInstance.countryDatas
+		}
+		
+		TRDataManager.sharedInstance.countryDatas = dataArr
+		return TRDataManager.sharedInstance.countryDatas
+	}
+	
+	class func synchronizeData() -> Bool
+	{
+		guard let masterDatas = sharedInstance.getTripMasterDatasFromDB() else
+		{
+			sharedInstance.trMasterDatas.removeAll()
+			return false
+		}
+		guard let detailDatas = sharedInstance.getTripDetailDatasFromDB() else
+		{
+			sharedInstance.trDetailDatas.removeAll()
+			return false
+		}
+		guard let countryDatas = sharedInstance.getCountryDatasFromDB() else
+		{
+			sharedInstance.countryDatas.removeAll()
+			return false
+		}
+		
+		sharedInstance.trMasterDatas = masterDatas
+		sharedInstance.trDetailDatas = detailDatas
+		sharedInstance.countryDatas = countryDatas
+		return true
+	}
 	
 	//MARK: Get Trip data from DB
 	private func getTripMasterDatasFromDB() -> Array<TripMasterData>?
 	{
-		let query = "SELECT * FROM TRIP_MASTER ORDER BY START_DATE DESC CREATE_TIME DESC"
+		let query = "SELECT * FROM TRIP_MASTER ORDER BY START_DATE DESC, CREATE_TIME DESC"
 		guard let dbDataArr = DBManager.getData(query: query) else
 		{
 			return nil
@@ -33,8 +93,7 @@ class TRDataManager
 			//DB 데이터 변환 정합성 체크
 			guard let id = Int(oneRow[0]),
 				  let budget = Float(oneRow[7]),
-				  let rate = Float(oneRow[8]),
-				  let isDailyUpdate = Bool(oneRow[9]) else
+				  let rate = Float(oneRow[8]) else
 			{
 				continue
 			}
@@ -48,7 +107,7 @@ class TRDataManager
 			                             stdCurrencyCode: oneRow[6],
 			                             budget: budget,
 			                             exchangeRate: rate,
-			                             currencyDailyUpdate: isDailyUpdate,
+			                             currencyDailyUpdate: oneRow[9].toBool(),
 			                             currencyUpdateTime: oneRow[10],
 			                             imgPath: oneRow[11],
 			                             createDate: oneRow[12],
@@ -60,7 +119,7 @@ class TRDataManager
 		return dataArr
 	}
 	
-	private func getTripDetailDatasFromDB(tripID: String) -> Array<TripDetailData>?
+	private func getTripDetailDatasFromDB() -> Array<TripDetailData>?
 	{
 		let query = "SELECT * FROM TRIP_DETAIL ORDER BY USED_DATE DESC"
 		guard let dbDataArr = DBManager.getData(query: query) else
@@ -73,23 +132,48 @@ class TRDataManager
 		{
 			//DB 데이터 변환 정합성 체크
 			guard let id = Int(oneRow[0]),
-				  let masterId = Int(oneRow[1]),
-				  let moneyType = MoneyType(rawValue: oneRow[2]),
-				  let usedCode = UsedCode(rawValue: oneRow[3]),
-				  let usedMoney = Float(oneRow[5]) else
+				  let mId = Int(oneRow[1]),
+				  let mType = MoneyType(rawValue: oneRow[2]),
+				  let uCode = UsedCode(rawValue: oneRow[3]),
+				  let uMoney = Float(oneRow[5]),
+				  let uMoneySign = MoneySign(rawValue: oneRow[6]) else
 			{
 				continue
 			}
 			
 			let oneData = TripDetailData(id: id,
-			                             masterId: masterId,
-			                             moneyType: moneyType,
-			                             usedCode: usedCode,
+			                             masterId: mId,
+			                             moneyType: mType,
+			                             usedCode: uCode,
 			                             usedDate: oneRow[4],
-			                             usedMoney: usedMoney,
-			                             title: oneRow[6],
-			                             desc: oneRow[7],
-			                             imgPath: oneRow[8])
+			                             usedMoney: uMoney,
+			                             usedMoneySign: uMoneySign,
+			                             title: oneRow[7],
+			                             desc: oneRow[8],
+			                             imgPath: oneRow[9])
+			dataArr.append(oneData)
+		}
+		
+		return dataArr
+	}
+	
+	//MARK: Get Country data from DB
+	private func getCountryDatasFromDB() -> Array<CountryData>?
+	{
+		let query = "SELECT * FROM COUNTRY_INFO ORDER BY COUNTRY_CODE"
+		guard let dbDataArr = DBManager.getData(query: query) else
+		{
+			return nil
+		}
+		
+		var dataArr = Array<CountryData>()
+		for oneRow in dbDataArr
+		{
+			let oneData = CountryData(countryCode: oneRow[0],
+			                          countryName: oneRow[1],
+			                          korCountryName: oneRow[2],
+			                          currencyCode: oneRow[3],
+			                          imgPath: oneRow[4])
 			dataArr.append(oneData)
 		}
 		
@@ -111,24 +195,15 @@ class TRDataManager
 		let presentDate = Date().toString()
 		let cUpdateDate = cUpdate ? presentDate : ""
 		
-		var query = "INSERT INTO TRIP_MASTER VALUES('\(t)', '\(sDate)', '\(eDate)', '\(code)', '\(eCurrCode)', '\(sCurrCode)', '\(b)', '\(rate)', '\(cUpdate)', '\(cUpdateDate)', '\(path)', '\(presentDate)', '\(presentDate)')"
+		let query = "INSERT INTO TRIP_MASTER (TITLE, START_DATE, END_DATE, COUNTRY_CODE, EXP_CURRENCY_CODE, STD_CURRENCY_CODE, BUDGET, EXCHANGE_RATE, DAILY_UPDATE_YN, DAILY_UPDATE_TIME, IMG_PATH, CREATE_TIME, UPDATE_TIME) VALUES('\(t)', '\(sDate)', '\(eDate)', '\(code)', '\(eCurrCode)', '\(sCurrCode)', \(b), \(rate), '\(cUpdate)', '\(cUpdateDate)', '\(path)', '\(presentDate)', '\(presentDate)')"
 		guard DBManager.setData(query: query) else
 		{
 			return nil
 		}
 		
-		query = "SELECT MAX(TR_ID) FROM TRIP_MASTER"
-		guard let tripIdArr = DBManager.getData(query: query) else
-		{
-			return nil
-		}
+		let id = TRDataManager.sharedInstance.getMaxTripMasterDataId() + 1
 		
-		guard let presentTripId = Int(tripIdArr[0][0]) else
-		{
-			return nil
-		}
-		
-		let newData = TripMasterData(id: presentTripId,
+		let newData = TripMasterData(id: id,
 		                             title: t,
 		                             startDate: sDate,
 		                             endDate: eDate,
@@ -150,33 +225,26 @@ class TRDataManager
 	                                      usedCode uCode: UsedCode,
 	                                      usedDate uDate: String,
 	                                      usedMoney uMoney: Float,
+	                                      usedMoneySign uMoneySign: MoneySign,
 	                                      title t: String,
 	                                      desc d: String,
 	                                      imgPath path: String) -> TripDetailData?
 	{
-		var query = "INSERT INTO TRIP_DETAIL VALUES('\(mId)', '\(mType.rawValue)', '\(uCode.rawValue)', '\(uDate)', '\(uMoney)', '\(t)', '\(d)', '\(path)')"
+		let query = "INSERT INTO TRIP_DETAIL VALUES(\(mId), '\(mType.rawValue)', '\(uCode.rawValue)', '\(uDate)', \(uMoney), '\(uMoneySign.rawValue)', '\(t)', '\(d)', '\(path)')"
 		guard DBManager.setData(query: query) else
 		{
 			return nil
 		}
 		
-		query = "SELECT MAX(TR_DETAIL_ID) FROM TRIP_DETAIL"
-		guard let tripIdArr = DBManager.getData(query: query) else
-		{
-			return nil
-		}
+		let id = TRDataManager.sharedInstance.getMaxTripDetailDataId() + 1
 		
-		guard let presentTripId = Int(tripIdArr[0][0]) else
-		{
-			return nil
-		}
-		
-		let newData = TripDetailData(id: presentTripId,
+		let newData = TripDetailData(id: id,
 		                             masterId: mId,
 		                             moneyType: mType,
 		                             usedCode: uCode,
 		                             usedDate: uDate,
 		                             usedMoney: uMoney,
+		                             usedMoneySign: uMoneySign,
 		                             title: t,
 		                             desc: d,
 		                             imgPath: path)
@@ -196,7 +264,7 @@ class TRDataManager
 	
 	private func updateTripDetailDataToDB(data: TripDetailData) -> Bool
 	{
-		let query = "UPDATE TRIP_DETAIL SET MONEY_TYPE = '\(data.moneyType.rawValue)', USED_CODE = '\(data.usedCode.rawValue)', USED_DATE = '\(data.usedDate)', USED_MONEY = \(data.usedMoney), TITLE = '\(data.title)', DESC = '\(data.desc)', IMG_PATH = '\(data.imgPath)' WHERE TR_DETAIL_ID = \(data.id)"
+		let query = "UPDATE TRIP_DETAIL SET MONEY_TYPE = '\(data.moneyType.rawValue)', USED_CODE = '\(data.usedCode.rawValue)', USED_DATE = '\(data.usedDate)', USED_MONEY = \(data.usedMoney), USED_MONEY_TYPE = '\(data.usedMoneyIsExpense.rawValue)', TITLE = '\(data.title)', DESC = '\(data.desc)', IMG_PATH = '\(data.imgPath)' WHERE TR_DETAIL_ID = \(data.id)"
 		
 		return DBManager.setData(query: query)
 	}
@@ -204,9 +272,8 @@ class TRDataManager
 	//MARK: Delete Trip data from DB
 	private func deleteTripMasterDataFromDB(id: Int) -> Bool
 	{
-		let masterQuery = "DELETE FROM TRIP_MASTER WHERE TR_ID = \(id)"
-		let detailQuery = "DELETE FROM TRIP_DETAIL WHERE TR_MASTER_ID = \(id)"
-		return DBManager.setData(query: detailQuery) && DBManager.setData(query: masterQuery)
+		let query = "DELETE FROM TRIP_MASTER WHERE TR_ID = \(id)"
+		return DBManager.setData(query: query)
 	}
 	
 	private func deleteTripDetailDataFromDB(id: Int) -> Bool
@@ -215,22 +282,24 @@ class TRDataManager
 		return DBManager.setData(query: query)
 	}
 	
-	//MARK: Getting Trip data
+	//MARK: Get Trip data
+	private func getMaxTripMasterDataId() -> Int
+	{
+		guard let lastData = TRDataManager.sharedInstance.trMasterDatas.last else
+		{
+			return 0
+		}
+		return lastData.id
+	}
+	
 	class func getTripMasterDatas() -> Array<TripMasterData>
 	{
-		guard let dataArr = TRDataManager.sharedInstance.getTripMasterDatasFromDB() else
-		{
-			TRDataManager.sharedInstance.trMasterDatas.removeAll()
-			return TRDataManager.sharedInstance.trMasterDatas
-		}
-		
-		TRDataManager.sharedInstance.trMasterDatas = dataArr
-		return TRDataManager.sharedInstance.trMasterDatas
+		return sharedInstance.trMasterDatas
 	}
 	
 	class func getTripMasterData(id: Int) -> TripMasterData?
 	{
-		for oneData in TRDataManager.sharedInstance.trMasterDatas
+		for oneData in sharedInstance.trMasterDatas
 		{
 			if id == oneData.id
 			{
@@ -238,23 +307,39 @@ class TRDataManager
 			}
 		}
 		return nil
+	}
+	
+	private func getMaxTripDetailDataId() -> Int
+	{
+		guard let lastData = TRDataManager.sharedInstance.trDetailDatas.last else
+		{
+			return 0
+		}
+		return lastData.id
+	}
+	
+	class func getTripDetailDatas() -> Array<TripDetailData>
+	{
+		return sharedInstance.trDetailDatas
 	}
 	
 	class func getTripDetailDatas(masterId: Int) -> Array<TripDetailData>
 	{
-		guard let dataArr = TRDataManager.sharedInstance.getTripDetailDatasFromDB(tripID: String(masterId)) else
-		{
-			TRDataManager.sharedInstance.trDetailDatas.removeAll()
-			return TRDataManager.sharedInstance.trDetailDatas
-		}
+		var dataArr = Array<TripDetailData>()
 		
-		TRDataManager.sharedInstance.trDetailDatas = dataArr
-		return TRDataManager.sharedInstance.trDetailDatas
+		for oneData in sharedInstance.trDetailDatas
+		{
+			if oneData.masterId == masterId
+			{
+				dataArr.append(oneData)
+			}
+		}
+		return dataArr
 	}
 	
 	class func getTripDetailData(id: Int) -> TripDetailData?
 	{
-		for oneData in TRDataManager.sharedInstance.trDetailDatas
+		for oneData in sharedInstance.trDetailDatas
 		{
 			if id == oneData.id
 			{
@@ -264,7 +349,7 @@ class TRDataManager
 		return nil
 	}
 	
-	//MARK: Setting Trip data
+	//MARK: Set Trip data
 	class func setNewTripMasterData(title t: String,
 	                                startDate sDate: String,
 	                                endDate eDate: String,
@@ -276,22 +361,20 @@ class TRDataManager
 	                                currencyDailyUpdate cUpdate: Bool,
 	                                imgPath path: String) -> TripMasterData?
 	{
-		guard let newData = TRDataManager.sharedInstance.insertTripMasterDataToDB(title: t,
-		                                                                          startDate: sDate,
-		                                                                          endDate: eDate,
-		                                                                          countryCode: code,
-		                                                                          expCurrencyCode: eCurrCode,
-		                                                                          stdCurrencyCode: sCurrCode,
-		                                                                          budget: b,
-		                                                                          exchangeRate: rate,
-		                                                                          currencyDailyUpdate: cUpdate,
-		                                                                          imgPath: path) else
+		guard let newData = sharedInstance.insertTripMasterDataToDB(title: t,
+																	startDate: sDate,
+																	endDate: eDate,
+																	countryCode: code,
+																	expCurrencyCode: eCurrCode,
+																	stdCurrencyCode: sCurrCode,
+																	budget: b,
+																	exchangeRate: rate,
+																	currencyDailyUpdate: cUpdate,
+																	imgPath: path) else
 		{
 			return nil
 		}
-		
-		var dataArr = TRDataManager.getTripMasterDatas()
-		dataArr.append(newData)
+		sharedInstance.trMasterDatas.append(newData)
 		return newData
 	}
 	
@@ -300,35 +383,35 @@ class TRDataManager
 	                                usedCode uCode: UsedCode,
 	                                usedDate uDate: String,
 	                                usedMoney uMoney: Float,
+	                                usedMoneySign uMoneySign: MoneySign,
 	                                title t: String,
 	                                desc d: String,
 	                                imaPath path: String) -> TripDetailData?
 	{
-		guard let newData = TRDataManager.sharedInstance.insertTripDetailDataToDB(masterId: mId,
-		                                                                          moneyType: mType,
-		                                                                          usedCode: uCode,
-		                                                                          usedDate: uDate,
-		                                                                          usedMoney: uMoney,
-		                                                                          title: t,
-		                                                                          desc: d,
-		                                                                          imgPath: path) else
+		guard let newData = sharedInstance.insertTripDetailDataToDB(masterId: mId,
+																	moneyType: mType,
+		                                                            usedCode: uCode,
+		                                                            usedDate: uDate,
+																	usedMoney: uMoney,
+																	usedMoneySign: uMoneySign,
+																	title: t,
+																	desc: d,
+																	imgPath: path) else
 		{
 			return nil
 		}
-		
-		var dataArr = TRDataManager.getTripDetailDatas(masterId: mId)
-		dataArr.append(newData)
+		sharedInstance.trDetailDatas.append(newData)
 		return newData
 	}
 	
 	class func updateTripMasterData(data: TripMasterData) -> Bool
 	{
-		guard TRDataManager.sharedInstance.updateTripMasterDataToDB(data: data) else
+		guard sharedInstance.updateTripMasterDataToDB(data: data) else
 		{
 			return false
 		}
 		
-		var dataArr = TRDataManager.getTripMasterDatas()
+		var dataArr = sharedInstance.trMasterDatas
 		for index in 0...dataArr.count - 1
 		{
 			let oneData = dataArr[index]
@@ -343,12 +426,12 @@ class TRDataManager
 	
 	class func updateTripDetailData(data: TripDetailData) -> Bool
 	{
-		guard TRDataManager.sharedInstance.updateTripDetailDataToDB(data: data) else
+		guard sharedInstance.updateTripDetailDataToDB(data: data) else
 		{
 			return false
 		}
 		
-		var dataArr = TRDataManager.getTripDetailDatas(masterId: data.masterId)
+		var dataArr = sharedInstance.trDetailDatas
 		for index in 0...dataArr.count - 1
 		{
 			let oneData = dataArr[index]
@@ -361,45 +444,60 @@ class TRDataManager
 		return false
 	}
 	
-	class func deleteTripMasterData(id: Int) -> Bool
+	class func deleteTripMasterData(id: Int) -> (Bool, Bool)
 	{
-		guard TRDataManager.sharedInstance.deleteTripMasterDataFromDB(id: id) else
+		guard sharedInstance.deleteTripMasterDataFromDB(id: id) else
 		{
-			return false
+			return (false, false)
 		}
 		
-		var dataArr = TRDataManager.getTripMasterDatas()
-		for index in 0...dataArr.count - 1
+		var isDeleteMasterData = false
+		var count = sharedInstance.trMasterDatas.count
+		for index in 0...count - 1
 		{
-			let oneData = dataArr[index]
+			let oneData = sharedInstance.trMasterDatas[index]
 			if id == oneData.id
 			{
-				dataArr.remove(at: index)
-				return true
+				sharedInstance.trMasterDatas.remove(at: index)
+				isDeleteMasterData = true
+				break
 			}
 		}
-		return false
+		
+		var isDeleteDetailData = false
+		count = sharedInstance.trDetailDatas.count
+		for index in 0...count - 1
+		{
+			let oneData = sharedInstance.trDetailDatas[index]
+			if id == oneData.masterId
+			{
+				sharedInstance.trDetailDatas.remove(at: index)
+				isDeleteDetailData = true
+			}
+		}
+		
+		return (isDeleteMasterData, isDeleteDetailData)
 	}
 	
-	class func deleteTripMasterData(data: TripMasterData) -> Bool
+	class func deleteTripMasterData(data: TripMasterData) -> (Bool, Bool)
 	{
 		return TRDataManager.deleteTripMasterData(id: data.id)
 	}
 	
-	class func deleteTripDetailData(id: Int, masterId: Int) -> Bool
+	class func deleteTripDetailData(id: Int) -> Bool
 	{
-		guard TRDataManager.sharedInstance.deleteTripDetailDataFromDB(id: id) else
+		guard sharedInstance.deleteTripDetailDataFromDB(id: id) else
 		{
 			return false
 		}
 		
-		var dataArr = TRDataManager.getTripDetailDatas(masterId: masterId)
-		for index in 0...dataArr.count - 1
+		let count = sharedInstance.trDetailDatas.count
+		for index in 0...count - 1
 		{
-			let oneData = dataArr[index]
+			let oneData = sharedInstance.trDetailDatas[index]
 			if id == oneData.id
 			{
-				dataArr.remove(at: index)
+				sharedInstance.trDetailDatas.remove(at: index)
 				return true
 			}
 		}
@@ -408,15 +506,60 @@ class TRDataManager
 	
 	class func deleteTripDetailData(data: TripDetailData) -> Bool
 	{
-		return TRDataManager.deleteTripDetailData(id: data.id, masterId: data.masterId)
+		return TRDataManager.deleteTripDetailData(id: data.id)
 	}
 	
+	//MARK: Get Country data
+	class func getCountryDatas() -> Array<CountryData>
+	{
+		return sharedInstance.countryDatas
+	}
 	
-	//class func containsTripData()
+	class func getCountryData(countryCode: String) -> CountryData?
+	{
+		for oneData in sharedInstance.countryDatas
+		{
+			if oneData.countryCode == countryCode
+			{
+				return oneData
+			}
+		}
+		return nil
+	}
 	
-	//MARK: Getting Country data
-//	class func getCountryDatas() -> Array<CountryData>
-//	{
-//		
-//	}
+	class func getCountryData(countryName: String) -> CountryData?
+	{
+		for oneData in sharedInstance.countryDatas
+		{
+			if oneData.countryName == countryName
+			{
+				return oneData
+			}
+		}
+		return nil
+	}
+	
+	class func getCountryData(korCountryName: String) -> CountryData?
+	{
+		for oneData in sharedInstance.countryDatas
+		{
+			if oneData.korCountryName == korCountryName
+			{
+				return oneData
+			}
+		}
+		return nil
+	}
+	
+	class func getCountryData(currencyCode: String) -> CountryData?
+	{
+		for oneData in sharedInstance.countryDatas
+		{
+			if oneData.currencyCode == currencyCode
+			{
+				return oneData
+			}
+		}
+		return nil
+	}
 }

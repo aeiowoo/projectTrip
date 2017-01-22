@@ -31,4 +31,17 @@ extension String
 		dateFormatter.dateFormat = DEFAULT_DATE_FORMAT
 		return dateFormatter.date(from: self)!
 	}
+	
+	func toBool() -> Bool
+	{
+		return self == "Y" ? true : false
+	}
+}
+
+extension Bool
+{
+	func toString() -> String
+	{
+		return self ? "Y" : "N"
+	}
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65CFCD0F1E3448E400966572 /* TripCountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CFCD0E1E3448E400966572 /* TripCountryListViewController.swift */; };
+		65CFCD111E344A0400966572 /* TripCountryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CFCD101E344A0400966572 /* TripCountryListTableViewCell.swift */; };
 		7A5EEFB91DFD475200C42DF9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EEFB81DFD475200C42DF9 /* NetworkManager.swift */; };
 		7ADD91F61E0652660014D9DC /* TripBudgetInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD91F41E0652660014D9DC /* TripBudgetInputViewController.swift */; };
 		7ADD91F71E0652660014D9DC /* TripProfileInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD91F51E0652660014D9DC /* TripProfileInputViewController.swift */; };
@@ -75,6 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65CFCD0E1E3448E400966572 /* TripCountryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCountryListViewController.swift; sourceTree = "<group>"; };
+		65CFCD101E344A0400966572 /* TripCountryListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCountryListTableViewCell.swift; sourceTree = "<group>"; };
 		7A5EEFB81DFD475200C42DF9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7ADD91F41E0652660014D9DC /* TripBudgetInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripBudgetInputViewController.swift; sourceTree = "<group>"; };
 		7ADD91F51E0652660014D9DC /* TripProfileInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripProfileInputViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +349,8 @@
 			isa = PBXGroup;
 			children = (
 				8C13FCF21DFD14E200D26D81 /* CountryStoryboard.storyboard */,
+				65CFCD0E1E3448E400966572 /* TripCountryListViewController.swift */,
+				65CFCD101E344A0400966572 /* TripCountryListTableViewCell.swift */,
 			);
 			path = CountryStoryboard;
 			sourceTree = "<group>";
@@ -485,7 +491,7 @@
 				TargetAttributes = {
 					7C51E2551DE9CBF60037DB1B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = K7A68F7T25;
+						DevelopmentTeam = KY4855WHX4;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
 					};
@@ -568,6 +574,7 @@
 				B6C4E8791DFD2B7C003F8667 /* TripGirdLayout.swift in Sources */,
 				7C9F445D1E0647E300608ADE /* TripDetailData.swift in Sources */,
 				7C9F44601E0647EE00608ADE /* Define.swift in Sources */,
+				65CFCD111E344A0400966572 /* TripCountryListTableViewCell.swift in Sources */,
 				7CE6AD5D1DFC3721002E72A7 /* FMDatabasePool.m in Sources */,
 				7CE6AD591DFC3721002E72A7 /* FMDatabase.m in Sources */,
 				7C9F445C1E0647E300608ADE /* CountryData.swift in Sources */,
@@ -590,6 +597,7 @@
 				7CE6AD5B1DFC3721002E72A7 /* FMDatabaseQueue.m in Sources */,
 				B6C4E8771DFD2931003F8667 /* TripListCollectionViewCell.swift in Sources */,
 				7C9F44561E0647C300608ADE /* TRDataExtension.swift in Sources */,
+				65CFCD0F1E3448E400966572 /* TripCountryListViewController.swift in Sources */,
 				7CE6AD5C1DFC3721002E72A7 /* FMDatabaseAdditions.m in Sources */,
 				B6C4E8731DFD15C5003F8667 /* TripListSubTableViewCell.swift in Sources */,
 				7CE6AD661DFC3B10002E72A7 /* DBManager.swift in Sources */,
@@ -747,16 +755,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = K7A68F7T25;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Myeong Woo Jeon (7DMEQD2B37)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Myeong Woo Jeon (7DMEQD2B37)";
+				DEVELOPMENT_TEAM = KY4855WHX4;
 				INFOPLIST_FILE = projectTrip/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = swiftive.projectTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47920dfc-0af7-4b4b-b986-0a5fa590b469";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
+				PROVISIONING_PROFILE = "826f9646-72f3-4b12-bee6-30ee141f90ec";
+				PROVISIONING_PROFILE_SPECIFIER = OnairTrip;
 				SWIFT_OBJC_BRIDGING_HEADER = "projectTrip/projectTrip-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -768,16 +777,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = K7A68F7T25;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Myeong Woo Jeon (7DMEQD2B37)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Myeong Woo Jeon (7DMEQD2B37)";
+				DEVELOPMENT_TEAM = KY4855WHX4;
 				INFOPLIST_FILE = projectTrip/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = swiftive.projectTrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47920dfc-0af7-4b4b-b986-0a5fa590b469";
-				PROVISIONING_PROFILE_SPECIFIER = "XC: *";
+				PROVISIONING_PROFILE = "826f9646-72f3-4b12-bee6-30ee141f90ec";
+				PROVISIONING_PROFILE_SPECIFIER = OnairTrip;
 				SWIFT_OBJC_BRIDGING_HEADER = "projectTrip/projectTrip-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

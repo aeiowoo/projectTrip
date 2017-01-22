@@ -8,10 +8,6 @@
 
 import Foundation
 
-let DB_FILE_NAME: String = "tripDB"
-let DB_FILE_TYPE: String = ".sqlite"
-let DB_FILE_FULLNAME: String = DB_FILE_NAME + DB_FILE_TYPE
-
 class DBManager
 {
 	//싱글톤 매니저 변수
@@ -75,7 +71,6 @@ class DBManager
 					}
 					dataArr!.append(oneRowData)
 				}
-				debugPrint(dataArr!)
 			}
 		}
 		return dataArr
