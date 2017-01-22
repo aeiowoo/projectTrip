@@ -17,13 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		//DBManager.sharedInstance.getData()
-
-		//DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
-		//DBManager.setData(query: "UPDATE TRIP_MASTER SET TITLE = \'프랑스\' WHERE TR_ID = \'2\'")
-		//DBManager.getData(query: "SELECT * FROM TRIP_MASTER")
+		TRDataManager.synchronizeData()
 		
-		//TRDataManager.getTripMasterDatas()
+		//dump(TRDataManager.getCountryDatas())
+		
+		dump(TRDataManager.getTripMasterDatas())
+		dump(TRDataManager.getTripDetailDatas())
+		
+		//dump(TRDataManager.getTripDetailDatas())
+		
+		//let newData = TRDataManager.setNewTripMasterData(title: "스페인", startDate: "2016-12-25", endDate: "2016-12-31", countryCode: "ES", expCurrencyCode: "ESP", stdCurrencyCode: "KRW", budget: 3000, exchangeRate: 25.5, currencyDailyUpdate: false, imgPath: "spain.png")
+		
+		//dump(TRDataManager.getTripMasterDatas())
+		
+		//newData!.budget = 4000
+		
+		//TRDataManager.updateTripMasterData(data: newData!)
+		//dump(TRDataManager.getTripMasterDatas())
+		
+		//TRDataManager.deleteTripMasterData(id: 18)
+		//dump(TRDataManager.getTripMasterDatas())
 		
 		return true
 	}
