@@ -10,7 +10,7 @@ import UIKit
 
 class TripListViewController: UIViewController {
     
-    let dbManager =  TRDataManager.getTripMasterDatas()
+//    let dbManager =  TRDataManager.getTripMasterDatas()
     
     @IBOutlet var collectionView: UICollectionView!
     
