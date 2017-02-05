@@ -72,6 +72,8 @@ class TripDetailInputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelOperation.adjustsFontSizeToFitWidth = false;
+        labelOperation.lineBreakMode = NSLineBreakMode.byTruncatingMiddle;
 
     }
     
@@ -115,6 +117,7 @@ class TripDetailInputViewController: UIViewController {
     }
     @IBAction func button0Clicked(_ sender: AnyObject) {
         self.updateCostLabel(selectedNum: 0)
+        
     }
     @IBAction func buttonDelClicked(_ sender: AnyObject) {
 //        self.operatorSelected(selectedOperator: "+")
@@ -299,16 +302,18 @@ class TripDetailInputViewController: UIViewController {
         }
         else
         {
-            if(labelOperation.isHidden)
-            {
-                labelOperation.isHidden = false
-                //TODO : setFrame
-            }
+//            if(labelOperation.isHidden)
+//            {
+            //                labelOperation.isHidden = false
+            //                //TODO : setFrame
+            //            }
+            
+            currentOperand = currentOperand + String(selectedNum)
             
             labelOperation.text = labelOperation.text! + selectedNumString
-            currentOperand = currentOperand + String(selectedNum)
             let operand1 : Int = Int(labelCost.text!)!
             let operand2 : Int = Int(currentOperand)!
+            
             if(currentOperator == "+")
             {
                 labelCost.text = String(operand1 + operand2)
@@ -319,24 +324,26 @@ class TripDetailInputViewController: UIViewController {
             }
             else if(currentOperator == "x")
             {
-              labelCost.text = String(operand1 * operand2)
+                labelCost.text = String(operand1 * operand2)
             }
             else if(currentOperator == "/")
             {
-                 labelCost.text = String(operand1 / operand2)
+                labelCost.text = String(operand1 / operand2)
             }
         }
         //int to String >> let x: Int? = myString.toInt()
     }
-
+    
     func operatorSelected(selectedOperator : String) {
         currentOperator = selectedOperator;
+        currentOperand = ""
         if(labelOperation.text == "")
         {
-        labelOperation.text = labelCost.text! + selectedOperator
+            labelOperation.text = labelCost.text! + selectedOperator
         }
-        else{
-        labelOperation.text = labelOperation.text! + selectedOperator     
+        else
+        {
+            labelOperation.text = labelOperation.text! + selectedOperator
         }
        
         if(labelOperation.isHidden)
