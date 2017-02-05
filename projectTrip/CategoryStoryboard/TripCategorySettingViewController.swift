@@ -9,7 +9,26 @@
 import UIKit
 
 class TripCategorySettingViewController: UIViewController {
-
+    
+    @IBOutlet var TripCategorySettingTableView: UITableView!
+    
+    let datas = TripCategorySettingDatas.getDatas()
+    
+    struct TripCategorySettingDatas {
+        
+        let image : String
+        let label : String
+        
+        static func getDatas() -> [TripCategorySettingDatas] {
+            
+            return [TripCategorySettingDatas(image: "icon00", label: "식비"),
+                    TripCategorySettingDatas(image: "icon01", label: "쇼핑"),
+                    TripCategorySettingDatas(image: "icon04", label: "관광"),
+                    TripCategorySettingDatas(image: "icon05", label: "교통"),
+                    TripCategorySettingDatas(image: "icon06", label: "숙박")]
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +55,39 @@ class TripCategorySettingViewController: UIViewController {
         
         self.dismiss(animated: true, completion: nil)
     }
-
-
 }
+
+extension TripCategorySettingViewController : UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return datas.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCategorySettingViewCell") as!TripCategorySettingViewCell
+        
+        cell.categoryImage.image = UIImage(named: datas[indexPath.row].image)
+        cell.categoryLabel.text = datas[indexPath.row].label
+        
+        return cell
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

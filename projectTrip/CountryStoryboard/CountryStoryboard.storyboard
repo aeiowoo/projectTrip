@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C32f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Trip Country List View Controller-->
         <scene sceneID="Tpy-iE-9YC">
             <objects>
-                <viewController storyboardIdentifier="CountryStoryboard" id="u6Q-rq-EQU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountryStoryboard" id="u6Q-rq-EQU" customClass="TripCountryListViewController" customModule="projectTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P6A-Z1-VKG"/>
                         <viewControllerLayoutGuide type="bottom" id="AkL-gD-Utq"/>
@@ -20,12 +21,55 @@
                     <view key="view" contentMode="scaleToFill" id="IGt-G3-IAI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mGa-1h-uFM">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="557" id="caL-7W-iL6"/>
+                                    <constraint firstAttribute="width" constant="375" id="eLX-p2-5kQ"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CountryCell" id="bh3-i1-xv1" customClass="TripCountryListTableViewCell" customModule="projectTrip" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bh3-i1-xv1" id="3RA-P7-zxH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfr-jC-qEw">
+                                                    <rect key="frame" x="17" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hfr-jC-qEw" firstAttribute="leading" secondItem="3RA-P7-zxH" secondAttribute="leadingMargin" constant="9" id="7pv-Ba-PYe"/>
+                                                <constraint firstItem="hfr-jC-qEw" firstAttribute="centerY" secondItem="3RA-P7-zxH" secondAttribute="centerY" id="jHf-6p-8jk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryLabel" destination="hfr-jC-qEw" id="ZPx-ot-JSN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.97737371009999996" blue="0.47259236139999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AkL-gD-Utq" firstAttribute="top" secondItem="mGa-1h-uFM" secondAttribute="bottom" id="Cml-R4-rVF"/>
+                            <constraint firstItem="mGa-1h-uFM" firstAttribute="leading" secondItem="IGt-G3-IAI" secondAttribute="leading" id="ggx-FJ-bpH"/>
+                            <constraint firstAttribute="trailing" secondItem="mGa-1h-uFM" secondAttribute="trailing" id="wdI-nI-2P6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countryTableView" destination="mGa-1h-uFM" id="2mg-Yg-icp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Un-Ub-cfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-225" y="128"/>
+            <point key="canvasLocation" x="-226.40000000000001" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>

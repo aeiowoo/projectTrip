@@ -31,7 +31,6 @@ class TripModalAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         menuView.frame.origin = self.isPresenting ? originPoint : self.destFrame
         containerView.addSubview(toView)
         
-        
         UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, animations: {
             
             menuView.frame.origin = self.isPresenting ? self.destFrame : originPoint

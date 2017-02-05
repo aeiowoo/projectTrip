@@ -56,7 +56,6 @@ class TripListViewController: UIViewController {
         tripGirdLayout = TripGirdLayout(numberOfColumns: 2)
         collectionView.collectionViewLayout = tripGirdLayout
         collectionView.reloadData()
-        
     }
 
     //보류
@@ -70,11 +69,16 @@ class TripListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        print("prepare")
-//        
-//        let destinationViewController = segue.destination as? TripListSubMenuViewController
-//        
-//        interactionController.wireToViewController(viewController: destinationViewController)
+        print("prepare")
+        
+        if segue.identifier == "SubMenuSegue" {
+            
+            let destinationViewController = segue.destination as? TripListSubMenuViewController
+            destinationViewController?.transitioningDelegate = self
+            interactionController.wireToViewController(viewController: destinationViewController)
+            
+        }
+        
     }
 }
 
@@ -83,16 +87,32 @@ extension TripListViewController : UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         transition.isPresenting = true
+        
+        UIView.animate(withDuration: 1) {
+            
+            self.view.backgroundColor = UIColor.black
+            self.view.alpha = 0.6
+        }
+        
         return transition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         dismissTransition.isPresenting = false
+        
+        UIView.animate(withDuration: 0.7) {
+            
+            self.view.backgroundColor = UIColor.clear
+            self.view.alpha = 1
+        }
+        
         return dismissTransition
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        
+        print("처리하자")
         
         return interactionController.interactionInProgress ? interactionController : nil
     }
