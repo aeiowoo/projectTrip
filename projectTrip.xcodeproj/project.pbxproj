@@ -38,6 +38,7 @@
 		8C13FCFC1DFD155100D26D81 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FCFB1DFD155100D26D81 /* ProfileStoryboard.storyboard */; };
 		8C13FE131E065A8700D26D81 /* TestLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13FE101E065A8700D26D81 /* TestLinkViewController.swift */; };
 		8C13FE151E065A8700D26D81 /* TripDetailInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C13FE121E065A8700D26D81 /* TripDetailInputViewController.xib */; };
+		8C505D4B1E344389001AA585 /* TripDetailInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13FE111E065A8700D26D81 /* TripDetailInputViewController.swift */; };
 		8CB601911E2B25DB000C4026 /* TripDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB601901E2B25DB000C4026 /* TripDetailItem.swift */; };
 		B601124B1E06290F0037A191 /* TripModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124A1E06290F0037A191 /* TripModalAnimator.swift */; };
 		B601124E1E0652380037A191 /* TripCategorySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601124D1E0652370037A191 /* TripCategorySettingViewController.swift */; };
@@ -557,6 +558,7 @@
 			files = (
 				B6493FD81DF70F3B00121528 /* AppDatas.swift in Sources */,
 				B6C4E8751DFD1D0A003F8667 /* TripTitleInputViewController.swift in Sources */,
+				8C505D4B1E344389001AA585 /* TripDetailInputViewController.swift in Sources */,
 				7ADD91F71E0652660014D9DC /* TripProfileInputViewController.swift in Sources */,
 				B6B0CBA91E065ED2000AB9D8 /* TripCategoryIconListViewController.swift in Sources */,
 				B6C4E8791DFD2B7C003F8667 /* TripGirdLayout.swift in Sources */,
