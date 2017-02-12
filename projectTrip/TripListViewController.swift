@@ -10,7 +10,7 @@ import UIKit
 
 class TripListViewController: UIViewController {
     
-    let dbManager =  TRDataManager.getTripMasterDatas()
+    let masterDatas =  TRDataManager.getTripMasterDatas()
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -20,25 +20,15 @@ class TripListViewController: UIViewController {
     
     var tripGirdLayout : TripGirdLayout!
     
-    let userDefaults = UserDefaults.standard
-    var collectionInt: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         createViewContents()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        collectionInt = userDefaults.integer(forKey: "collectionInt")
         collectionView.reloadData()
     }
     
@@ -59,6 +49,8 @@ class TripListViewController: UIViewController {
         tripGirdLayout = TripGirdLayout(numberOfColumns: 2)
         collectionView.collectionViewLayout = tripGirdLayout
         collectionView.reloadData()
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     //보류
@@ -76,10 +68,14 @@ class TripListViewController: UIViewController {
         
         if segue.identifier == "SubMenuSegue" {
             
-            let destinationViewController = segue.destination as? TripListSubMenuViewController
-            destinationViewController?.transitioningDelegate = self
+            let destinationViewController = segue.destination as! TripListSubMenuViewController
+            destinationViewController.transitioningDelegate = self
             interactionController.wireToViewController(viewController: destinationViewController)
+        }
+        
+        if segue.identifier == "DetailSegue" {
             
+            let destVC = segue.destination as! TripDetailInputViewController
         }
         
     }
@@ -115,8 +111,6 @@ extension TripListViewController : UIViewControllerTransitioningDelegate {
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         
-        print("처리하자")
-        
         return interactionController.interactionInProgress ? interactionController : nil
     }
 }
@@ -125,17 +119,33 @@ extension TripListViewController : UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return dbManager.count
+        return masterDatas.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TripListCell", for: indexPath) as! TripListCollectionViewCell
         
-        cell.tripLabel.text = ""
+        let budget = String(masterDatas[indexPath.row].budget)
         
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = NSLocale.current
+        formatter.string(for: budget)
+        
+        cell.tripLabel.text = masterDatas[indexPath.row].title
+        cell.tripBudget.text = budget
+        
+        let date = "\(masterDatas[indexPath.row].startDate) ~ \(masterDatas[indexPath.row].endDate)"
+        
+        cell.tripDate.text = date
         
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "DetailSegue", sender: self)
     }
 }
 

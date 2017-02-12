@@ -14,10 +14,6 @@ class TripTitleInputViewController: UIViewController {
     @IBOutlet var textField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var collectionInt : Int = 0
-    
-    let userdefault = UserDefaults.standard
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +29,6 @@ class TripTitleInputViewController: UIViewController {
         super.viewWillAppear(animated)
         
         animation()
-        getCollectionInt()
     }
     
     //컨텐츠 생성
@@ -69,27 +64,26 @@ class TripTitleInputViewController: UIViewController {
         }
     }
     
-    func getCollectionInt() {
-        
-        self.collectionInt = self.userdefault.integer(forKey: "collectionInt")
-    }
-    
 //    여행 추가하기 버튼
     @IBAction func onAddButton(_ sender: UIButton) {
         
-        self.collectionInt += 1
-        self.userdefault.set(self.collectionInt, forKey: "collectionInt")
-        self.userdefault.synchronize()
+        //텍스트
+        let text = self.textField.text!
+        
+        //날짜
+        let current = Date(timeIntervalSinceNow: TimeInterval(NSTimeZone.system.secondsFromGMT()))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let currentDate = formatter.string(from: current)
+        
+        TRDataManager.setNewTripMasterData(title: text, startDate: currentDate, endDate: currentDate, countryCode: "", expCurrencyCode: "", stdCurrencyCode: "KRW", budget: 0, exchangeRate: 0, currencyDailyUpdate: false, imgPath: "")
+        
         
         self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func dismissButton(_ sender: UIButton) {
-        
-        self.collectionInt = 0
-        self.userdefault.set(self.collectionInt, forKey: "collectionInt")
-        self.userdefault.synchronize()
-        
+
         self.dismiss(animated: true, completion: nil)
     }
 }

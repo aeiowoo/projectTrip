@@ -46,7 +46,6 @@ class TripListSubMenuViewController: UIViewController {
 
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         
-        print("swipe")
         dismiss(animated: true, completion: nil)
     }
 
@@ -80,6 +79,14 @@ extension TripListSubMenuViewController : UITableViewDataSource {
         cell.tripListSubLabel.text = datas[indexPath.row].label
         
         return cell
+    }
+}
+
+extension TripListSubMenuViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 
