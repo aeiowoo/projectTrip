@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 
-class TripDetailInputViewController: UIViewController {
+class TripDetailInputViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
    
     @IBOutlet weak var labelCurrency: UILabel!
     @IBOutlet weak var labelCost: UILabel!
@@ -72,6 +72,8 @@ class TripDetailInputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelOperation.adjustsFontSizeToFitWidth = false;
+        labelOperation.lineBreakMode = NSLineBreakMode.byTruncatingMiddle;
 
     }
     
@@ -115,6 +117,7 @@ class TripDetailInputViewController: UIViewController {
     }
     @IBAction func button0Clicked(_ sender: AnyObject) {
         self.updateCostLabel(selectedNum: 0)
+        
     }
     @IBAction func buttonDelClicked(_ sender: AnyObject) {
 //        self.operatorSelected(selectedOperator: "+")
@@ -197,18 +200,22 @@ class TripDetailInputViewController: UIViewController {
     {
         print("ButtonShopping touched")
     }
+    
     func selectTour(_ sender:UIButton)
     {
         print("ButtonTour touched")
     }
+    
     func selectTraffic(_ sender:UIButton)
     {
         print("ButtonTraffic touched")
     }
+    
     func selectStay(_ sender:UIButton)
     {
         print("ButtonStay touched")
     }
+    
     func selectEtc(_ sender:UIButton)
     {
         print("ButtonEtc touched")
@@ -222,6 +229,7 @@ class TripDetailInputViewController: UIViewController {
     
     func selectPicture( _sender:UIButton)
     {
+        /*
         print("ButtonPicture touched")
         
         let alertController = UIAlertController.init()
@@ -239,7 +247,26 @@ class TripDetailInputViewController: UIViewController {
         alertController.addAction(pickPhoto)
         alertController.addAction(cancel)
         
-        present(alertController, animated: true, completion: nil)
+         present(alertController, animated: true, completion: nil)
+         */
+        
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
+            action in
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {
+            action in
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func initButtonPosition(){
@@ -299,16 +326,18 @@ class TripDetailInputViewController: UIViewController {
         }
         else
         {
-            if(labelOperation.isHidden)
-            {
-                labelOperation.isHidden = false
-                //TODO : setFrame
-            }
+//            if(labelOperation.isHidden)
+//            {
+            //                labelOperation.isHidden = false
+            //                //TODO : setFrame
+            //            }
+            
+            currentOperand = currentOperand + String(selectedNum)
             
             labelOperation.text = labelOperation.text! + selectedNumString
-            currentOperand = currentOperand + String(selectedNum)
             let operand1 : Int = Int(labelCost.text!)!
             let operand2 : Int = Int(currentOperand)!
+            
             if(currentOperator == "+")
             {
                 labelCost.text = String(operand1 + operand2)
@@ -319,24 +348,26 @@ class TripDetailInputViewController: UIViewController {
             }
             else if(currentOperator == "x")
             {
-              labelCost.text = String(operand1 * operand2)
+                labelCost.text = String(operand1 * operand2)
             }
             else if(currentOperator == "/")
             {
-                 labelCost.text = String(operand1 / operand2)
+                labelCost.text = String(operand1 / operand2)
             }
         }
         //int to String >> let x: Int? = myString.toInt()
     }
-
+    
     func operatorSelected(selectedOperator : String) {
         currentOperator = selectedOperator;
+        currentOperand = ""
         if(labelOperation.text == "")
         {
-        labelOperation.text = labelCost.text! + selectedOperator
+            labelOperation.text = labelCost.text! + selectedOperator
         }
-        else{
-        labelOperation.text = labelOperation.text! + selectedOperator     
+        else
+        {
+            labelOperation.text = labelOperation.text! + selectedOperator
         }
        
         if(labelOperation.isHidden)
@@ -347,5 +378,14 @@ class TripDetailInputViewController: UIViewController {
 //        
 //        labelOperation.text = labelOperation.text! + selectedOperator
 
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        //use image here!
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
