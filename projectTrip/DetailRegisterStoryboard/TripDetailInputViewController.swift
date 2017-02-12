@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 
-class TripDetailInputViewController: UIViewController {
+class TripDetailInputViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
    
     @IBOutlet weak var labelCurrency: UILabel!
     @IBOutlet weak var labelCost: UILabel!
@@ -200,18 +200,22 @@ class TripDetailInputViewController: UIViewController {
     {
         print("ButtonShopping touched")
     }
+    
     func selectTour(_ sender:UIButton)
     {
         print("ButtonTour touched")
     }
+    
     func selectTraffic(_ sender:UIButton)
     {
         print("ButtonTraffic touched")
     }
+    
     func selectStay(_ sender:UIButton)
     {
         print("ButtonStay touched")
     }
+    
     func selectEtc(_ sender:UIButton)
     {
         print("ButtonEtc touched")
@@ -225,6 +229,7 @@ class TripDetailInputViewController: UIViewController {
     
     func selectPicture( _sender:UIButton)
     {
+        /*
         print("ButtonPicture touched")
         
         let alertController = UIAlertController.init()
@@ -242,7 +247,26 @@ class TripDetailInputViewController: UIViewController {
         alertController.addAction(pickPhoto)
         alertController.addAction(cancel)
         
-        present(alertController, animated: true, completion: nil)
+         present(alertController, animated: true, completion: nil)
+         */
+        
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: {
+            action in
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {
+            action in
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func initButtonPosition(){
@@ -354,5 +378,14 @@ class TripDetailInputViewController: UIViewController {
 //        
 //        labelOperation.text = labelOperation.text! + selectedOperator
 
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        //use image here!
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
