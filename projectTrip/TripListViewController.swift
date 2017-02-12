@@ -10,7 +10,7 @@ import UIKit
 
 class TripListViewController: UIViewController {
     
-//    let dbManager =  TRDataManager.getTripMasterDatas()
+    let dbManager =  TRDataManager.getTripMasterDatas()
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -27,6 +27,8 @@ class TripListViewController: UIViewController {
         super.viewDidLoad()
 
         createViewContents()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -130,8 +132,6 @@ extension TripListViewController : UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TripListCell", for: indexPath) as! TripListCollectionViewCell
-        
-        
         
         cell.tripLabel.text = ""
         

@@ -15,8 +15,4 @@ class TripListCollectionViewCell: UICollectionViewCell {
     @IBOutlet var tripBudget: UILabel!
     
     
-    
-    
-    
-    
 }

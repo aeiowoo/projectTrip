@@ -39,7 +39,7 @@ class TripTitleInputViewController: UIViewController {
     //컨텐츠 생성
     func createViewContents() {
         
-//        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
         
         self.backgroundImage.alpha = 0
         self.textField.alpha = 0
